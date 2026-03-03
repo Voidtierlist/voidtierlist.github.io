@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
 let allPlayersData=[];
+let currentMode="overall";
 
 /* ===============================
    GAMEMODE ICONS
@@ -31,28 +32,26 @@ diamondsmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 function normalizeGamemode(name){
 return name
 .toLowerCase()
-.replace(/[\s_-]/g,"")   // remove spaces underscore dash
-.replace("pvp","");      // fixes mace pvp naming
+.replace(/[^a-z]/g,"");
 }
 
-/* ===============================
-   LOAD PLAYERS
-================================ */
+function getTierForMode(player,mode){
+if(!player.gamemodes) return null;
 
-fetch("player_points.json")
-.then(r=>r.json())
-.then(data=>{
+for(const gm in player.gamemodes){
+if(normalizeGamemode(gm)===mode){
+return player.gamemodes[gm].tier;
+}
+}
 
-const container=document.getElementById("leaderboard");
-container.innerHTML="";
+return null;
+}
 
-const players=Object.values(data)
-.sort((a,b)=>b.total_points-a.total_points);
+function hasAnyGamemode(player){
+return !!(player.gamemodes && Object.keys(player.gamemodes).length);
+}
 
-allPlayersData=players;
-
-players.forEach((player,index)=>{
-
+function createTiersHTML(player){
 let tiersHTML="";
 
 ALL_GAMEMODES.forEach(mode=>{
@@ -60,18 +59,8 @@ ALL_GAMEMODES.forEach(mode=>{
 const icon=GAMEMODE_ICONS[mode];
 if(!icon) return;
 
-let tier="-";
-let opacity="0.35";
-
-if(player.gamemodes){
-for(const gm in player.gamemodes){
-
-if(normalizeGamemode(gm)===mode){
-tier=player.gamemodes[gm].tier;
-opacity="1";
-}
-}
-}
+const tier=getTierForMode(player,mode) || "-";
+const opacity=tier==="-" ? "0.35" : "1";
 
 tiersHTML+=`
 <div class="tier-circle">
@@ -81,19 +70,41 @@ tiersHTML+=`
 <div class="tier-label">${tier}</div>
 </div>`;
 });
+
+return tiersHTML;
+}
+
+function getSortedPlayers(data){
+return Object.values(data)
+.sort((a,b)=>b.total_points-a.total_points);
+}
+
+function renderLeaderboard(players){
+const container=document.getElementById("leaderboard");
+container.innerHTML="";
+
+players.forEach((player,index)=>{
+
 const row=document.createElement("div");
 row.className="player";
+row.dataset.username=player.mc_username.toLowerCase();
+
+const statusHTML=hasAnyGamemode(player)
+? `<p>${player.total_points} Points</p>`
+: `<p class="not-tested">Not Tested</p>`;
 
 row.innerHTML=`
 
 <div class="rank">${index+1}.</div>
 
+<div class="info">
 <img class="skin"
 src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
-<div class="info">
+<div class="info-text">
 <h3>${player.mc_username}</h3>
-<p>${player.total_points} Points</p>
+${statusHTML}
+</div>
 </div>
 
 <div class="region region-${player.region}">
@@ -101,7 +112,7 @@ ${player.region}
 </div>
 
 <div class="tiers">
-${tiersHTML}
+${createTiersHTML(player)}
 </div>
 `;
 
@@ -111,7 +122,34 @@ container.appendChild(row);
 
 });
 
+applySearchFilter();
+}
+
+function applyModeFilter(mode){
+currentMode=mode;
+
+const players=(mode==="overall")
+? [...allPlayersData]
+: allPlayersData.filter(player=>getTierForMode(player,mode));
+
+renderLeaderboard(players);
+}
+
+/* ===============================
+   LOAD PLAYERS
+================================ */
+
+function loadPlayers(){
+fetch("player_points.json")
+.then(r=>r.json())
+.then(data=>{
+allPlayersData=getSortedPlayers(data);
+applyModeFilter(currentMode);
 });
+}
+
+loadPlayers();
+setInterval(loadPlayers,60000);
 
 /* ===============================
    OPEN PLAYER MODAL
@@ -138,36 +176,17 @@ p=>p.mc_username===player.mc_username)+1;
 document.getElementById("modal-position")
 .textContent=`#${pos} Overall • ${player.total_points} Points`;
 
-let tiersHTML="";
+const tiersHTML=createTiersHTML(player);
 
-ALL_GAMEMODES.forEach(mode=>{
+const modalTiers=document.getElementById("modal-tiers");
+modalTiers.innerHTML=tiersHTML;
 
-const icon=GAMEMODE_ICONS[mode];
-if(!icon) return;
-
-let tier="-";
-let opacity="0.35";
-
-if(player.gamemodes){
-for(const gm in player.gamemodes){
-
-if(normalizeGamemode(gm)===mode){
-tier=player.gamemodes[gm].tier;
-opacity="1";
+if(!hasAnyGamemode(player)){
+modalTiers.insertAdjacentHTML(
+"beforeend",
+'<div class="not-tested-badge">Not Tested</div>'
+);
 }
-}
-}
-
-tiersHTML+=`
-<div class="tier-circle">
-<div class="tier-bubble" style="opacity:${opacity}">
-<img src="${icon}">
-</div>
-<div class="tier-label">${tier}</div>
-</div>`;
-});
-
-document.getElementById("modal-tiers").innerHTML=tiersHTML;
 
 }
 
@@ -189,31 +208,38 @@ e.target.classList.add("hidden");
 });
 
 /* ===============================
-   MCTIERS LIVE SEARCH FILTER
+   GAMEMODE FILTER TABS
+================================ */
+
+const modeButtons=document.querySelectorAll(".mode");
+modeButtons.forEach(btn=>{
+btn.addEventListener("click",()=>{
+modeButtons.forEach(el=>el.classList.remove("active"));
+btn.classList.add("active");
+applyModeFilter(btn.dataset.mode);
+});
+});
+
+/* ===============================
+   SEARCH FILTER
 ================================ */
 
 const searchInput=document.getElementById("searchInput");
 
-if(searchInput){
+function applySearchFilter(){
+if(!searchInput) return;
 
-searchInput.addEventListener("input",()=>{
-
-const query=searchInput.value.toLowerCase();
-
+const query=searchInput.value.trim().toLowerCase();
 const players=document.querySelectorAll(".player");
 
 players.forEach(player=>{
-
-const name=player.querySelector("h3")
-.textContent.toLowerCase();
-
-player.style.display=
-name.includes(query) ? "flex" : "none";
-
+const name=player.dataset.username || "";
+player.style.display=name.includes(query) ? "" : "none";
 });
+}
 
-});
-
+if(searchInput){
+searchInput.addEventListener("input",applySearchFilter);
 }
 
 });
