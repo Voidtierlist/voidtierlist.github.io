@@ -95,7 +95,7 @@ const statusHTML=hasAnyGamemode(player)
 
 row.innerHTML=`
 
-<div class="rank">${index+1}.</div>
+<div class="rank ${index===0?"top-1":index===1?"top-2":index===2?"top-3":""}">${index+1}.</div>
 
 <div class="info">
 <img class="skin"
