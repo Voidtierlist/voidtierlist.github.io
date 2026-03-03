@@ -264,6 +264,7 @@ font-weight:700;
 display:flex;
 justify-content:center;
 align-items:center;
+justify-self:center;
 
 font-size:12px;
 font-weight:700;
@@ -271,7 +272,12 @@ font-weight:700;
 padding:5px 12px;
 border-radius:6px;
 
-min-width:60px;
+width:fit-content;
+max-width:100%;
+white-space:nowrap;
+
+background:#1f2636;
+color:#c9d2ff;
 }
 
 .region-AS{background:#1f2d3b;color:#7bbcff;}
