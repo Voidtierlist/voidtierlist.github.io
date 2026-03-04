@@ -373,7 +373,7 @@
     "1224975402553053185": {
         "mc_username": "ExplosionAlso_",
         "region": "AS",
-        "total_points": 89,
+        "total_points": 36,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -404,8 +404,12 @@
                 "points": 3
             },
             "crystal": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "LT4",
+                "points": 3
+            },
+            "SMP": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
