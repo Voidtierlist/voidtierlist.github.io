@@ -208,7 +208,6 @@ empty.textContent="No players";
 tierColumn.appendChild(empty);
 }else{
 playersInTier.forEach(player=>{
-const tier=getTierForMode(player,mode);
 const card=document.createElement("article");
 card.className="tier-player-card";
 card.dataset.username=player.mc_username.toLowerCase();
@@ -218,7 +217,6 @@ card.innerHTML=`
 <img class="tier-player-skin" src="https://render.crafty.gg/3d/bust/${player.mc_username}" alt="${player.mc_username}">
 <div class="tier-player-meta">
 <h4>${player.mc_username}</h4>
-<p>${tier} • ${player.total_points} pts</p>
 </div>
 </div>
 <div class="tier-region-wrap">
