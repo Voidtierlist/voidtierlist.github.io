@@ -29,6 +29,19 @@ diamondpot:"https://mctiers.com/tier_icons/pot.svg",
 diamondsmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
+const TIER_ORDER = {
+HT1:0,
+LT1:1,
+HT2:2,
+LT2:3,
+HT3:4,
+LT3:5,
+HT4:6,
+LT4:7,
+HT5:8,
+LT5:9
+};
+
 function normalizeGamemode(name){
 return name
 .toLowerCase()
@@ -51,15 +64,48 @@ function hasAnyGamemode(player){
 return !!(player.gamemodes && Object.keys(player.gamemodes).length);
 }
 
+function getTierOrderValue(tier){
+if(!tier) return Number.POSITIVE_INFINITY;
+
+const normalizedTier=tier.toUpperCase().trim();
+return TIER_ORDER[normalizedTier] ?? Number.POSITIVE_INFINITY;
+}
+
+function getSortedModesForPlayer(player){
+const testedModes=[];
+const untestedModes=[];
+
+ALL_GAMEMODES.forEach(mode=>{
+const tier=getTierForMode(player,mode);
+
+if(tier){
+testedModes.push({mode,tier});
+return;
+}
+
+untestedModes.push({mode,tier:"-"});
+});
+
+testedModes.sort((a,b)=>{
+const tierOrderDelta=getTierOrderValue(a.tier)-getTierOrderValue(b.tier);
+if(tierOrderDelta!==0) return tierOrderDelta;
+
+return a.mode.localeCompare(b.mode);
+});
+
+return [...testedModes,...untestedModes];
+}
+
 function createTiersHTML(player){
 let tiersHTML="";
 
-ALL_GAMEMODES.forEach(mode=>{
+const orderedModes=getSortedModesForPlayer(player);
+
+orderedModes.forEach(({mode,tier})=>{
 
 const icon=GAMEMODE_ICONS[mode];
 if(!icon) return;
 
-const tier=getTierForMode(player,mode) || "-";
 const opacity=tier==="-" ? "0.35" : "1";
 
 tiersHTML+=`

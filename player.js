@@ -10,8 +10,28 @@ const GAMEMODE_ICONS = {
     diamondsmp:"https://subtiers.net/assets/dia_smp-523efa38.svg"
 };
 
+const TIER_ORDER = {
+    HT1:0,
+    LT1:1,
+    HT2:2,
+    LT2:3,
+    HT3:4,
+    LT3:5,
+    HT4:6,
+    LT4:7,
+    HT5:8,
+    LT5:9
+};
+
 function normalizeGamemode(name){
     return name.toLowerCase().replace(/[^a-z]/g,"");
+}
+
+function getTierOrderValue(tier){
+    if(!tier) return Number.POSITIVE_INFINITY;
+
+    const normalizedTier=tier.toUpperCase().trim();
+    return TIER_ORDER[normalizedTier] ?? Number.POSITIVE_INFINITY;
 }
 
 const params = new URLSearchParams(window.location.search);
@@ -44,14 +64,24 @@ fetch("player_points.json")
     const gmDiv=document.getElementById("gamemodes");
     gmDiv.innerHTML="";
 
-    for(const gm in player.gamemodes){
+    const sortedGamemodes=Object.entries(player.gamemodes)
+    .map(([gm,gmData])=>({
+        gm,
+        gmData,
+        key:normalizeGamemode(gm),
+        tierOrder:getTierOrderValue(gmData?.tier)
+    }))
+    .filter(({key,gmData})=>GAMEMODE_ICONS[key] && gmData?.tier)
+    .sort((a,b)=>{
+        const tierOrderDelta=a.tierOrder-b.tierOrder;
+        if(tierOrderDelta!==0) return tierOrderDelta;
 
-        const gmData=player.gamemodes[gm];
+        return a.key.localeCompare(b.key);
+    });
 
-        const key=normalizeGamemode(gm);
+    sortedGamemodes.forEach(({gmData,key})=>{
+
         const icon=GAMEMODE_ICONS[key];
-
-        if(!icon || !gmData.tier) continue;
 
         const card=document.createElement("div");
         card.className="tier-card";
@@ -64,6 +94,6 @@ fetch("player_points.json")
 
 
         gmDiv.appendChild(card);
-    }
+    });
 
 });
