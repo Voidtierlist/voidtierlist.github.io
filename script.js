@@ -337,9 +337,11 @@ modalCombatRankTitle.textContent=rank.title;
 modalCombatRank.className="modal-combat-rank hidden";
 }
 
+const topPositionClass=pos===1?"top-1":pos===2?"top-2":pos===3?"top-3":"";
+
 document.getElementById("modal-position").innerHTML=`
-<span class="modal-position-rank">${pos}.</span>
-<span class="modal-position-overall">🏆 OVERALL</span>
+<span class="modal-position-rank ${topPositionClass}">${pos}.</span>
+<span class="modal-position-overall"><img class="modal-overall-icon" src="https://mctiers.com/tier_icons/overall.svg" alt="Overall icon">OVERALL</span>
 <span class="modal-position-points">(${player.total_points} points)</span>`;
 
 const tiersHTML=createTiersHTML(player);
