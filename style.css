@@ -206,6 +206,8 @@ padding-left:10px;
 
 .info-text h3{margin:0;font-size:16px;line-height:1.1}
 .info-text p{margin:5px 0 0;color:#7592c0;font-size:12px}
+.combat-rank-line{display:flex;align-items:center;gap:6px;margin:5px 0 0;color:#8fb0e0;font-size:12px}
+.combat-rank-icon{width:14px;height:14px;object-fit:contain;flex-shrink:0}
 
 .region{
 justify-self:center;

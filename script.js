@@ -42,6 +42,16 @@ HT5:8,
 LT5:9
 };
 
+const COMBAT_RANKS = [
+{ minPoints: 400, title: "Combat Grandmaster", icon: "https://mctiers.com/titles/combat_grandmaster.webp" },
+{ minPoints: 250, title: "Combat Master", icon: "https://mctiers.com/titles/combat_master.webp" },
+{ minPoints: 100, title: "Combat Ace", icon: "https://mctiers.com/titles/combat_ace.svg" },
+{ minPoints: 50, title: "Combat Specialist", icon: "https://mctiers.com/titles/combat_specialist.svg" },
+{ minPoints: 20, title: "Combat Cadet", icon: "https://mctiers.com/titles/combat_cadet.svg" },
+{ minPoints: 10, title: "Combat Novice", icon: "https://mctiers.com/titles/combat_novice.svg" },
+{ minPoints: 0, title: "Rookie", icon: "https://mctiers.com/titles/rookie.svg" }
+];
+
 function normalizeGamemode(name){
 return name
 .toLowerCase()
@@ -96,6 +106,20 @@ return a.mode.localeCompare(b.mode);
 return [...testedModes,...untestedModes];
 }
 
+function getCombatRank(points){
+return COMBAT_RANKS.find(rank=>points>=rank.minPoints) || COMBAT_RANKS[COMBAT_RANKS.length-1];
+}
+
+function createCombatRankHTML(player){
+const rank=getCombatRank(player.total_points || 0);
+
+return `
+<p class="combat-rank-line">
+<img class="combat-rank-icon" src="${rank.icon}" alt="${rank.title} icon">
+<span>${rank.title} (${player.total_points} Points)</span>
+</p>`;
+}
+
 function createTiersHTML(player){
 let tiersHTML="";
 
@@ -137,7 +161,7 @@ row.className="player";
 row.dataset.username=player.mc_username.toLowerCase();
 
 const statusHTML=hasAnyGamemode(player)
-? `<p>${player.total_points} Points</p>`
+? createCombatRankHTML(player)
 : `<p class="not-tested">Not Tested</p>`;
 
 row.innerHTML=`
