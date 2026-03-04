@@ -373,19 +373,19 @@
     "1224975402553053185": {
         "mc_username": "ExplosionAlso_",
         "region": "AS",
-        "total_points": 140,
+        "total_points": 89,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "LT3",
+                "points": 6
             },
             "axe": {
                 "tier": "LT4",
                 "points": 3
             },
             "sword": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "LT3",
+                "points": 6
             },
             "mace": {
                 "tier": "LT4",
@@ -468,6 +468,30 @@
     },
     "1388400982878322759": {
         "mc_username": "Mahfuzfether",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1092107921036427334": {
+        "mc_username": "NightHunterzz_",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1433510641540530257": {
+        "mc_username": "Decal_",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1177547416975716453": {
+        "mc_username": "ywun",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1414245242734903306": {
+        "mc_username": "Epicxdddd",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
