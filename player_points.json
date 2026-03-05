@@ -263,23 +263,23 @@
     "996427837986852994": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 482,
+        "total_points": 264,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "LT3",
+                "points": 6
             },
             "sword": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "LT3",
+                "points": 6
             },
             "mace": {
                 "tier": "HT5",
                 "points": 2
             },
             "diamond pot": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "LT3",
+                "points": 6
             },
             "axe": {
                 "tier": "HT1",
@@ -290,8 +290,8 @@
                 "points": 60
             },
             "uhc": {
-                "tier": "HT1",
-                "points": 60
+                "tier": "HT4",
+                "points": 4
             },
             "diamond smp": {
                 "tier": "HT1",
