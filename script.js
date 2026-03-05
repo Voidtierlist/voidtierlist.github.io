@@ -178,7 +178,8 @@ document.querySelector(".leaderboard-header")?.classList.remove("hidden");
 players.forEach((player,index)=>{
 
 const row=document.createElement("div");
-row.className="player";
+const placementClass=index===0?"top-1":index===1?"top-2":index===2?"top-3":"normal-rank";
+row.className=`player ${placementClass}`;
 row.dataset.username=player.mc_username.toLowerCase();
 
 const statusHTML=hasAnyGamemode(player)
@@ -187,7 +188,7 @@ const statusHTML=hasAnyGamemode(player)
 
 row.innerHTML=`
 
-<div class="rank ${index===0?"top-1":index===1?"top-2":index===2?"top-3":""}">${index+1}.</div>
+<div class="rank">${index+1}.</div>
 
 <div class="info">
 <img class="skin"
