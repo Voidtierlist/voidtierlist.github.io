@@ -23,6 +23,16 @@ const TIER_ORDER = {
     LT5:9
 };
 
+const COMBAT_RANKS = [
+    { minPoints: 400, title: "Combat Grandmaster", icon: "https://mctiers.com/titles/combat_grandmaster.webp" },
+    { minPoints: 250, title: "Combat Master", icon: "https://mctiers.com/titles/combat_master.webp" },
+    { minPoints: 100, title: "Combat Ace", icon: "https://mctiers.com/titles/combat_ace.svg" },
+    { minPoints: 50, title: "Combat Specialist", icon: "https://mctiers.com/titles/combat_specialist.svg" },
+    { minPoints: 20, title: "Combat Cadet", icon: "https://mctiers.com/titles/combat_cadet.svg" },
+    { minPoints: 10, title: "Combat Novice", icon: "https://mctiers.com/titles/combat_novice.svg" },
+    { minPoints: 0, title: "Rookie", icon: "https://mctiers.com/titles/rookie.svg" }
+];
+
 function normalizeGamemode(name){
     return name.toLowerCase().replace(/[^a-z]/g,"");
 }
@@ -32,6 +42,30 @@ function getTierOrderValue(tier){
 
     const normalizedTier=tier.toUpperCase().trim();
     return TIER_ORDER[normalizedTier] ?? Number.POSITIVE_INFINITY;
+}
+
+function getCombatRank(points){
+    return COMBAT_RANKS.find(rank=>points>=rank.minPoints) || COMBAT_RANKS[COMBAT_RANKS.length-1];
+}
+
+function isGoldParticleRank(title){
+    return title==="Combat Grandmaster" || title==="Combat Master";
+}
+
+function attachGoldParticles(source){
+    if(!source || source.dataset.particlesAttached==="true") return;
+
+    source.dataset.particlesAttached="true";
+
+    for(let i=0;i<12;i++){
+        const particle=document.createElement("span");
+        particle.className="gold-particle";
+        particle.style.setProperty("--particle-delay",`${Math.random()*1.6}s`);
+        particle.style.setProperty("--particle-duration",`${1.2+Math.random()*1.4}s`);
+        particle.style.setProperty("--particle-x",`${-14+Math.random()*28}px`);
+        particle.style.setProperty("--particle-scale",`${0.45+Math.random()*0.9}`);
+        source.appendChild(particle);
+    }
 }
 
 const params = new URLSearchParams(window.location.search);
@@ -57,6 +91,22 @@ fetch("player_points.json")
 
     document.getElementById("points").textContent =
         player.total_points;
+
+    const rank=getCombatRank(player.total_points || 0);
+    const profileCombatRank=document.getElementById("profile-combat-rank");
+    const profileCombatRankLogo=document.getElementById("profile-combat-rank-logo");
+    const profileCombatRankIcon=document.getElementById("profile-combat-rank-icon");
+    const profileCombatRankTitle=document.getElementById("profile-combat-rank-title");
+
+    profileCombatRank.classList.remove("hidden");
+    profileCombatRankIcon.src=rank.icon;
+    profileCombatRankIcon.alt=`${rank.title} icon`;
+    profileCombatRankTitle.textContent=rank.title;
+
+    if(isGoldParticleRank(rank.title)){
+        profileCombatRankLogo.classList.add("gold-particle-source");
+        attachGoldParticles(profileCombatRankLogo);
+    }
 
     document.getElementById("skin").src =
         `https://render.crafty.gg/3d/bust/${player.mc_username}`;

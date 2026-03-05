@@ -120,12 +120,23 @@ function getCombatRank(points){
 return COMBAT_RANKS.find(rank=>points>=rank.minPoints) || COMBAT_RANKS[COMBAT_RANKS.length-1];
 }
 
+function isGoldParticleRank(title){
+return title==="Combat Grandmaster" || title==="Combat Master";
+}
+
+function getRankLogoClass(title){
+return isGoldParticleRank(title) ? "combat-rank-logo gold-particle-source" : "combat-rank-logo";
+}
+
 function createCombatRankHTML(player){
 const rank=getCombatRank(player.total_points || 0);
+const logoClass=getRankLogoClass(rank.title);
 
 return `
 <p class="combat-rank-line">
+<span class="${logoClass}">
 <img class="combat-rank-icon" src="${rank.icon}" alt="${rank.title} icon">
+</span>
 <span>${rank.title} (${player.total_points} Points)</span>
 </p>`;
 }
@@ -203,6 +214,7 @@ container.appendChild(row);
 
 });
 
+attachGoldParticles(container);
 applySearchFilter();
 }
 
@@ -327,12 +339,21 @@ const rankTheme=COMBAT_RANK_THEMES[rank.title] || "gray";
 const modalCombatRank=document.getElementById("modal-combat-rank");
 const modalCombatRankIcon=document.getElementById("modal-combat-rank-icon");
 const modalCombatRankTitle=document.getElementById("modal-combat-rank-title");
+const modalCombatRankLogo=document.getElementById("modal-combat-rank-logo");
 
 if(hasAnyGamemode(player)){
 modalCombatRank.className=`modal-combat-rank rank-theme-${rankTheme}`;
 modalCombatRankIcon.src=rank.icon;
 modalCombatRankIcon.alt=`${rank.title} icon`;
 modalCombatRankTitle.textContent=rank.title;
+if(isGoldParticleRank(rank.title)){
+modalCombatRankLogo.classList.add("gold-particle-source");
+attachGoldParticles(modalCombatRank);
+}else{
+modalCombatRankLogo.classList.remove("gold-particle-source");
+modalCombatRankLogo.dataset.particlesAttached="";
+modalCombatRankLogo.querySelectorAll(".gold-particle").forEach(node=>node.remove());
+}
 }else{
 modalCombatRank.className="modal-combat-rank hidden";
 }
@@ -408,6 +429,26 @@ player.style.display=name.includes(query) ? "" : "none";
 
 if(searchInput){
 searchInput.addEventListener("input",applySearchFilter);
+}
+
+function attachGoldParticles(scope=document){
+const sources=scope.querySelectorAll(".gold-particle-source");
+
+sources.forEach(source=>{
+if(source.dataset.particlesAttached==="true") return;
+
+source.dataset.particlesAttached="true";
+
+for(let i=0;i<12;i++){
+const particle=document.createElement("span");
+particle.className="gold-particle";
+particle.style.setProperty("--particle-delay",`${Math.random()*1.6}s`);
+particle.style.setProperty("--particle-duration",`${1.2+Math.random()*1.4}s`);
+particle.style.setProperty("--particle-x",`${-14+Math.random()*28}px`);
+particle.style.setProperty("--particle-scale",`${0.45+Math.random()*0.9}`);
+source.appendChild(particle);
+}
+});
 }
 
 });
