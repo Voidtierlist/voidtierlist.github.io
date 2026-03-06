@@ -519,7 +519,12 @@
     "1414245242734903306": {
         "mc_username": "Epicxdddd",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
