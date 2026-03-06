@@ -100,8 +100,13 @@
     "1328960846210007127": {
         "mc_username": "Noman0404",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "mace": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1398729184871846054": {
         "mc_username": "G0atedVo1d",
