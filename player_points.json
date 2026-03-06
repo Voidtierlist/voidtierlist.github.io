@@ -495,11 +495,11 @@
     "1388400982878322759": {
         "mc_username": "Mahfuzfether",
         "region": "AS",
-        "total_points": 4,
+        "total_points": 6,
         "gamemodes": {
             "crystal": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
