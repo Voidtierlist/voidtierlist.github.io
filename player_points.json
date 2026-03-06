@@ -495,8 +495,13 @@
     "1388400982878322759": {
         "mc_username": "Mahfuzfether",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 4,
+        "gamemodes": {
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "1092107921036427334": {
         "mc_username": "NightHunterzz_",
