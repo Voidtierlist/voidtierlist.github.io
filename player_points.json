@@ -441,11 +441,11 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 32,
+        "total_points": 36,
         "gamemodes": {
             "nethpot": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT3",
+                "points": 10
             },
             "sword": {
                 "tier": "LT3",
