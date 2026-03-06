@@ -455,8 +455,13 @@
     "953199568516960326": {
         "mc_username": "ht3_Sachin1",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 10,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT3",
+                "points": 10
+            }
+        }
     },
     "1347794710194028567": {
         "mc_username": "Devilsggs",
