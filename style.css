@@ -24,10 +24,11 @@ padding:22px;
 }
 
 .topbar{
-display:flex;
+display:grid;
+grid-template-columns:auto 1fr auto;
 align-items:center;
-gap:32px;
-height:62px;
+gap:20px;
+height:82px;
 padding:0 20px;
 border-radius:16px;
 background:rgba(8,17,33,.88);
@@ -43,13 +44,13 @@ line-height:1;
 
 .logo img{
 display:block;
-height:40px;
+height:64px;
 width:auto;
-max-width:220px;
+max-width:340px;
 object-fit:contain;
 }
 
-.nav-links{display:flex;gap:24px}
+.nav-links{display:flex;justify-content:center;gap:24px}
 
 .nav-links a{
 text-decoration:none;
@@ -60,7 +61,7 @@ font-size:16px;
 
 .nav-links a.active,.nav-links a:hover{color:#eaf2ff}
 
-.nav-right{margin-left:auto}
+.nav-right{justify-self:end}
 
 .search-wrapper{position:relative}
 
