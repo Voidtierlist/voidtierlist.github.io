@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 let allPlayersData=[];
 let currentMode="overall";
+let modalCloseTimer=null;
+let searchDebounceTimer=null;
 
 /* ===============================
    GAMEMODE ICONS
@@ -282,6 +284,14 @@ attachGoldParticles(container);
 applySearchFilter();
 }
 
+function renderLeaderboardLoadingSkeleton(count=6){
+const container=document.getElementById("leaderboard");
+if(!container) return;
+
+const skeletonRows=Array.from({length:count},()=>'<div class="leaderboard-skeleton-row" aria-hidden="true"></div>').join("");
+container.innerHTML=`<div class="leaderboard-loading" aria-live="polite" aria-busy="true">${skeletonRows}</div>`;
+}
+
 function renderTierMenu(players,mode){
 const container=document.getElementById("leaderboard");
 container.innerHTML="";
@@ -360,13 +370,20 @@ if(syncUrl){
 syncModeInUrl(mode);
 }
 
+showLeaderboardUpdateState();
+renderLeaderboardLoadingSkeleton(5);
+
+setTimeout(()=>{
 if(mode==="overall"){
 renderLeaderboard([...allPlayersData]);
+hideLeaderboardUpdateState();
 return;
 }
 
 const players=allPlayersData.filter(player=>getTierForMode(player,mode));
 renderTierMenu(players,mode);
+hideLeaderboardUpdateState();
+},170);
 }
 
 
@@ -413,6 +430,61 @@ void button.offsetWidth;
 button.classList.add("is-switching");
 }
 
+function showLeaderboardUpdateState(){
+const board=document.getElementById("leaderboard");
+if(!board) return;
+board.classList.add("is-updating");
+}
+
+function hideLeaderboardUpdateState(){
+const board=document.getElementById("leaderboard");
+if(!board) return;
+board.classList.remove("is-updating");
+}
+
+function showSearchLoading(){
+const searchResults=document.getElementById("searchResults");
+if(!searchResults) return;
+
+searchResults.innerHTML=`
+<div class="search-loading" role="status" aria-live="polite">
+<span class="loader-spinner" aria-hidden="true"></span>
+<span>Searching players...</span>
+</div>`;
+}
+
+function hideSearchLoading(){
+const searchResults=document.getElementById("searchResults");
+if(!searchResults) return;
+searchResults.innerHTML="";
+}
+
+function showModalLoading(){
+const modalCard=document.querySelector("#playerModal .modal-card");
+if(!modalCard) return;
+modalCard.classList.add("loading");
+}
+
+function hideModalLoading(){
+const modalCard=document.querySelector("#playerModal .modal-card");
+if(!modalCard) return;
+modalCard.classList.remove("loading");
+}
+
+function closeModalWithAnimation(){
+const modal=document.getElementById("playerModal");
+if(!modal || modal.classList.contains("hidden")) return;
+
+modal.classList.add("is-closing");
+modal.classList.remove("is-visible");
+
+clearTimeout(modalCloseTimer);
+modalCloseTimer=setTimeout(()=>{
+modal.classList.add("hidden");
+modal.classList.remove("is-closing");
+},200);
+}
+
 /* ===============================
    LOAD PLAYERS
 ================================ */
@@ -447,6 +519,11 @@ function openPlayerModal(player){
 const modal=document.getElementById("playerModal");
 
 modal.classList.remove("hidden");
+showModalLoading();
+modal.classList.remove("is-closing");
+requestAnimationFrame(()=>{
+modal.classList.add("is-visible");
+});
 
 document.getElementById("modal-name").textContent=
 player.mc_username;
@@ -504,6 +581,8 @@ modalTiers.insertAdjacentHTML(
 );
 }
 
+setTimeout(hideModalLoading,160);
+
 }
 
 /* ===============================
@@ -512,14 +591,13 @@ modalTiers.insertAdjacentHTML(
 
 document.getElementById("closeModal")
 .addEventListener("click",()=>{
-document.getElementById("playerModal")
-.classList.add("hidden");
+closeModalWithAnimation();
 });
 
 document.getElementById("playerModal")
 .addEventListener("click",(e)=>{
 if(e.target.id==="playerModal"){
-e.target.classList.add("hidden");
+closeModalWithAnimation();
 }
 });
 
@@ -557,10 +635,16 @@ players.forEach(player=>{
 const name=player.dataset.username || "";
 player.style.display=name.includes(query) ? "" : "none";
 });
+
+hideSearchLoading();
 }
 
 if(searchInput){
-searchInput.addEventListener("input",applySearchFilter);
+searchInput.addEventListener("input",()=>{
+showSearchLoading();
+clearTimeout(searchDebounceTimer);
+searchDebounceTimer=setTimeout(applySearchFilter,150);
+});
 }
 
 function attachGoldParticles(scope=document){
