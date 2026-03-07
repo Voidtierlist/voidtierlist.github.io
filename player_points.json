@@ -348,11 +348,11 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 8,
+        "total_points": 6,
         "gamemodes": {
             "sword": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT4",
+                "points": 4
             },
             "crystal": {
                 "tier": "HT5",
@@ -441,11 +441,11 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 42,
+        "total_points": 38,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT3",
-                "points": 10
+                "tier": "LT3",
+                "points": 6
             },
             "sword": {
                 "tier": "LT3",
@@ -550,5 +550,11 @@
                 "points": 4
             }
         }
+    },
+    "1246396951814082648": {
+        "mc_username": "VulkanDaGreat",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
