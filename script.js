@@ -364,6 +364,31 @@ const players=allPlayersData.filter(player=>getTierForMode(player,mode));
 renderTierMenu(players,mode);
 }
 
+
+function setupInfoPanel(){
+const infoToggle=document.getElementById("infoToggle");
+const infoPanel=document.getElementById("infoPanel");
+
+if(!infoToggle || !infoPanel) return;
+
+infoToggle.addEventListener("click",(event)=>{
+const willOpen=infoPanel.classList.contains("hidden");
+infoPanel.classList.toggle("hidden",!willOpen);
+infoToggle.setAttribute("aria-expanded",String(willOpen));
+event.stopPropagation();
+});
+
+infoPanel.addEventListener("click",(event)=>{
+event.stopPropagation();
+});
+
+document.addEventListener("click",()=>{
+if(infoPanel.classList.contains("hidden")) return;
+infoPanel.classList.add("hidden");
+infoToggle.setAttribute("aria-expanded","false");
+});
+}
+
 /* ===============================
    LOAD PLAYERS
 ================================ */
@@ -381,6 +406,7 @@ currentMode=getModeFromPath();
 setActiveModeButton(currentMode);
 syncModeInUrl(currentMode,{replace:true});
 
+setupInfoPanel();
 loadPlayers();
 setInterval(loadPlayers,60000);
 

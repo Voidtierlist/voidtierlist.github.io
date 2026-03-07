@@ -110,7 +110,50 @@
         <div class="col-player">PLAYER</div>
         <div class="col-region">REGION</div>
         <div class="col-tiers">TIERS</div>
-        <div class="leaderboard-info">Information</div>
+        <div class="leaderboard-info-wrap">
+            <button id="infoToggle" class="leaderboard-info" type="button" aria-expanded="false" aria-controls="infoPanel">
+                Information
+            </button>
+
+            <div id="infoPanel" class="info-panel hidden" role="dialog" aria-label="Achievement titles information">
+                <div class="info-panel-tabs">
+                    <button class="info-panel-tab active" type="button">Titles</button>
+                </div>
+
+                <h4>How to obtain <a href="https://mctiers.com/titles" target="_blank" rel="noopener noreferrer">Achievement Titles</a></h4>
+
+                <ul class="info-panel-list">
+                    <li>
+                        <span class="info-title-title rank-grandmaster">Combat Grandmaster</span>
+                        <span class="info-title-points">Obtained 400+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-master">Combat Master</span>
+                        <span class="info-title-points">Obtained 250+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-ace">Combat Ace</span>
+                        <span class="info-title-points">Obtained 100+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-specialist">Combat Specialist</span>
+                        <span class="info-title-points">Obtained 50+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-cadet">Combat Cadet</span>
+                        <span class="info-title-points">Obtained 20+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-novice">Combat Novice</span>
+                        <span class="info-title-points">Obtained 10+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-rookie">Rookie</span>
+                        <span class="info-title-points">Starting rank for players with less than 10 points.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div id="leaderboard"></div>
 </div>

@@ -165,14 +165,51 @@ padding-left:84px;
 text-align:center;
 }
 
+.leaderboard-info-wrap{justify-self:end;position:relative}
+
 .leaderboard-info{
-justify-self:end;
 padding:8px 14px;
 border-radius:10px;
 background:#12233f;
 color:#e5efff;
 font-size:15px;
+border:1px solid #1d3357;
+cursor:pointer;
 }
+
+.leaderboard-info:hover{filter:brightness(1.08)}
+
+.info-panel{
+position:absolute;
+top:calc(100% + 8px);
+right:0;
+width:min(360px,82vw);
+padding:12px;
+border-radius:12px;
+border:1px solid #1a365d;
+background:linear-gradient(180deg,#0e1d36,#0a162b);
+box-shadow:0 16px 30px rgba(0,0,0,.35);
+z-index:20;
+}
+
+.info-panel-tabs{display:flex;margin-bottom:10px}
+.info-panel-tab{flex:1;padding:7px 10px;border-radius:8px;border:1px solid #314f79;background:#12233f;color:#e8f1ff;font-size:18px;font-weight:700}
+
+.info-panel h4{margin:0 0 10px;font-size:17px;color:#f2f6ff}
+.info-panel h4 a{color:#f2f6ff}
+
+.info-panel-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.info-panel-list li{display:flex;flex-direction:column;gap:2px}
+.info-title-title{font-weight:800;font-size:30px;line-height:1.05}
+.info-title-points{font-size:24px;color:#a7b8d3}
+
+.rank-grandmaster{color:#f8d66b}
+.rank-master{color:#f2ce57}
+.rank-ace{color:#ff8895}
+.rank-specialist{color:#d4b0ff}
+.rank-cadet{color:#bbc8ff}
+.rank-novice{color:#cfd4ff}
+.rank-rookie{color:#c3ccdb}
 
 #leaderboard{padding:6px 10px 10px}
 
@@ -516,7 +553,7 @@ font-size:13px;
 .info-text p{font-size:11px}
 .region{font-size:14px}
 .leaderboard-header{grid-template-columns:70px minmax(240px,1fr) 120px minmax(430px,auto) 0}
-.leaderboard-info{display:none}
+.leaderboard-info-wrap{display:none}
 .player{grid-template-columns:70px minmax(240px,1fr) 120px minmax(430px,auto)}
 .tier-menu-grid{grid-template-columns:repeat(2,minmax(220px,1fr))}
 }
