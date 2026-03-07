@@ -472,13 +472,17 @@
     "953199568516960326": {
         "mc_username": "ht3_Sachin1",
         "region": "AS",
-        "total_points": 16,
+        "total_points": 22,
         "gamemodes": {
             "sword": {
                 "tier": "HT3",
                 "points": 10
             },
             "mace": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             }
