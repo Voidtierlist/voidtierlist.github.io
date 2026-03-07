@@ -100,7 +100,7 @@
     "1328960846210007127": {
         "mc_username": "Noman0404",
         "region": "AS",
-        "total_points": 4,
+        "total_points": 5,
         "gamemodes": {
             "sword": {
                 "tier": "LT5",
@@ -111,6 +111,10 @@
                 "points": 2
             },
             "crystal": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "SMP": {
                 "tier": "LT5",
                 "points": 1
             }
@@ -441,13 +445,25 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 18,
+        "total_points": 31,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
                 "points": 6
             },
             "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "diamond pot": {
                 "tier": "LT3",
                 "points": 6
             },
