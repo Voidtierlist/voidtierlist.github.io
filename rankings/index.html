@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Void Tierlist</title>
+
+<link rel="stylesheet" href="/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- =========================
+        TOP NAVBAR
+========================= -->
+
+<div class="topbar">
+
+    <div class="logo">
+        <img src="https://img.sanishtech.com/u/b0cc6d20c3b97419b5dcca09a323d8a0.png" alt="Void Tierlist logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#" class="active">Rankings</a>
+        <a href="#">Discords</a>
+    </div>
+
+    <div class="nav-right">
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search player...">
+        </div>
+    </div>
+
+</div>
+<div id="searchResults" class="search-results"></div>
+
+<!-- =========================
+        GAMEMODE BAR
+========================= -->
+
+<div class="gamemode-bar">
+
+<div class="mode active" data-mode="overall">
+<img src="https://mctiers.com/tier_icons/overall.svg">
+<span>Overall</span>
+</div>
+
+<div class="mode" data-mode="smp">
+<img src="https://mctiers.com/tier_icons/smp.svg">
+<span>SMP</span>
+</div>
+
+<div class="mode" data-mode="sword">
+<img src="https://mctiers.com/tier_icons/sword.svg">
+<span>Sword</span>
+</div>
+
+<div class="mode" data-mode="crystal">
+<img src="https://mctiers.com/tier_icons/vanilla.svg">
+<span>Crystal</span>
+</div>
+
+<div class="mode" data-mode="nethpot">
+<img src="https://mctiers.com/tier_icons/nethop.svg">
+<span>Nethpot</span>
+</div>
+
+<div class="mode" data-mode="diamondpot">
+<img src="https://mctiers.com/tier_icons/pot.svg">
+<span>Diamond Pot</span>
+</div>
+
+<div class="mode" data-mode="uhc">
+<img src="https://mctiers.com/tier_icons/uhc.svg">
+<span>UHC</span>
+</div>
+
+<div class="mode" data-mode="axe">
+<img src="https://mctiers.com/tier_icons/axe.svg">
+<span>Axe</span>
+</div>
+
+<div class="mode" data-mode="diamondsmp">
+<img src="https://subtiers.net/assets/dia_smp-523efa38.svg">
+<span>Diamond SMP</span>
+</div>
+
+<div class="mode" data-mode="mace">
+<img src="https://mctiers.com/tier_icons/mace.svg">
+<span>Mace</span>
+</div>
+
+</div>
+
+<div class="divider-line"></div>
+
+
+<!-- =========================
+        LEADERBOARD AREA
+========================= -->
+
+<div class="content-box">
+    <div class="leaderboard-header">
+        <div class="col-rank">#</div>
+        <div class="col-player">PLAYER</div>
+        <div class="col-region">REGION</div>
+        <div class="col-tiers">TIERS</div>
+        <div class="leaderboard-info">Information</div>
+    </div>
+    <div id="leaderboard"></div>
+</div>
+
+</div>
+
+
+<!-- =========================
+        PLAYER MODAL
+========================= -->
+
+<div id="playerModal" class="hidden">
+
+    <div class="modal-card">
+
+        <div id="closeModal" class="close">✕</div>
+
+        <img id="modal-skin" class="modal-avatar">
+
+        <h2 id="modal-name"></h2>
+
+        <div id="modal-combat-rank" class="modal-combat-rank hidden">
+            <span id="modal-combat-rank-logo" class="combat-rank-logo">
+                <img id="modal-combat-rank-icon" class="modal-combat-rank-icon" alt="Rank icon">
+            </span>
+            <span id="modal-combat-rank-title"></span>
+        </div>
+
+        <div id="modal-region" class="modal-region"></div>
+
+        <div class="modal-section-title">POSITION</div>
+        <div id="modal-position" class="modal-position"></div>
+
+        <div class="modal-section-title">TIERS</div>
+
+        <div id="modal-tiers" class="modal-tiers"></div>
+
+    </div>
+
+</div>
+
+
+<script src="/script.js"></script>
+
+</body>
+</html>
