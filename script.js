@@ -62,6 +62,67 @@ const COMBAT_RANK_THEMES = {
 "Rookie":"gray"
 };
 
+const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
+
+function normalizePath(path){
+if(!path) return "/";
+
+const normalized=path.replace(/\/+$/,"" );
+return normalized || "/";
+}
+
+function getRankingsBasePath(pathname=window.location.pathname){
+const normalized=normalizePath(pathname);
+const rankingsIndex=normalized.indexOf("/rankings");
+
+if(rankingsIndex===-1) return "";
+
+return normalized.slice(0,rankingsIndex);
+}
+
+function getModeFromPath(pathname=window.location.pathname){
+const normalized=normalizePath(pathname);
+const segments=normalized.split("/").filter(Boolean);
+const rankingsIndex=segments.indexOf("rankings");
+
+if(rankingsIndex===-1) return "overall";
+
+const requestedMode=segments[rankingsIndex+1] || "overall";
+return VALID_MODES.has(requestedMode) ? requestedMode : "overall";
+}
+
+function buildPathForMode(mode){
+const basePath=normalizePath(getRankingsBasePath());
+const rankingsPath=basePath==="/" ? "/rankings" : `${basePath}/rankings`;
+
+if(mode==="overall") return rankingsPath;
+
+return `${rankingsPath}/${mode}`;
+}
+
+function syncModeInUrl(mode,{replace=false}={}){
+const nextPath=buildPathForMode(mode);
+const currentPath=normalizePath(window.location.pathname);
+
+if(currentPath===nextPath) return;
+
+const nextState={mode};
+if(replace){
+history.replaceState(nextState,"",nextPath);
+return;
+}
+
+history.pushState(nextState,"",nextPath);
+}
+
+function setActiveModeButton(mode){
+const modeButtons=document.querySelectorAll(".mode");
+
+modeButtons.forEach(btn=>{
+btn.classList.toggle("active",btn.dataset.mode===mode);
+});
+}
+
 function normalizeGamemode(name){
 return name
 .toLowerCase()
@@ -286,8 +347,13 @@ container.appendChild(tierMenu);
 applySearchFilter();
 }
 
-function applyModeFilter(mode){
+function applyModeFilter(mode,{syncUrl=true}={}){
 currentMode=mode;
+setActiveModeButton(mode);
+
+if(syncUrl){
+syncModeInUrl(mode);
+}
 
 if(mode==="overall"){
 renderLeaderboard([...allPlayersData]);
@@ -307,9 +373,13 @@ fetch("player_points.json")
 .then(r=>r.json())
 .then(data=>{
 allPlayersData=getSortedPlayers(data);
-applyModeFilter(currentMode);
+applyModeFilter(currentMode,{syncUrl:false});
 });
 }
+
+currentMode=getModeFromPath();
+setActiveModeButton(currentMode);
+syncModeInUrl(currentMode,{replace:true});
 
 loadPlayers();
 setInterval(loadPlayers,60000);
@@ -406,10 +476,15 @@ e.target.classList.add("hidden");
 const modeButtons=document.querySelectorAll(".mode");
 modeButtons.forEach(btn=>{
 btn.addEventListener("click",()=>{
-modeButtons.forEach(el=>el.classList.remove("active"));
-btn.classList.add("active");
 applyModeFilter(btn.dataset.mode);
 });
+});
+
+window.addEventListener("popstate",()=>{
+const modeFromPath=getModeFromPath();
+if(modeFromPath===currentMode) return;
+
+applyModeFilter(modeFromPath,{syncUrl:false});
 });
 
 /* ===============================
