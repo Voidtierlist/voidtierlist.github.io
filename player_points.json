@@ -269,11 +269,15 @@
     "1409911997889253417": {
         "mc_username": "FardinAmjadGamer",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 12,
         "gamemodes": {
             "sword": {
                 "tier": "HT3",
                 "points": 10
+            },
+            "crystal": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
