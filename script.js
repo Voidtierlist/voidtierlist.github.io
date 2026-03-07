@@ -347,9 +347,14 @@ container.appendChild(tierMenu);
 applySearchFilter();
 }
 
-function applyModeFilter(mode,{syncUrl=true}={}){
+function applyModeFilter(mode,{syncUrl=true,fromButton=false}={}){
 currentMode=mode;
 setActiveModeButton(mode);
+
+if(fromButton){
+const selectedButton=document.querySelector(`.mode[data-mode="${mode}"]`);
+animateModeSelection(selectedButton);
+}
 
 if(syncUrl){
 syncModeInUrl(mode);
@@ -389,6 +394,25 @@ infoToggle.setAttribute("aria-expanded","false");
 });
 }
 
+function showPageLoader(){
+const loader=document.getElementById("pageLoader");
+if(!loader) return;
+loader.classList.remove("hidden");
+}
+
+function hidePageLoader(){
+const loader=document.getElementById("pageLoader");
+if(!loader) return;
+loader.classList.add("hidden");
+}
+
+function animateModeSelection(button){
+if(!button) return;
+button.classList.remove("is-switching");
+void button.offsetWidth;
+button.classList.add("is-switching");
+}
+
 /* ===============================
    LOAD PLAYERS
 ================================ */
@@ -399,6 +423,9 @@ fetch("/player_points.json")
 .then(data=>{
 allPlayersData=getSortedPlayers(data);
 applyModeFilter(currentMode,{syncUrl:false});
+})
+.finally(()=>{
+hidePageLoader();
 });
 }
 
@@ -407,6 +434,7 @@ setActiveModeButton(currentMode);
 syncModeInUrl(currentMode,{replace:true});
 
 setupInfoPanel();
+showPageLoader();
 loadPlayers();
 setInterval(loadPlayers,60000);
 
@@ -502,7 +530,7 @@ e.target.classList.add("hidden");
 const modeButtons=document.querySelectorAll(".mode");
 modeButtons.forEach(btn=>{
 btn.addEventListener("click",()=>{
-applyModeFilter(btn.dataset.mode);
+applyModeFilter(btn.dataset.mode,{fromButton:true});
 });
 });
 
