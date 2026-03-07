@@ -441,7 +441,7 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 36,
+        "total_points": 42,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT3",
@@ -460,6 +460,10 @@
                 "points": 10
             },
             "SMP": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
                 "tier": "LT3",
                 "points": 6
             }
