@@ -369,7 +369,7 @@ renderTierMenu(players,mode);
 ================================ */
 
 function loadPlayers(){
-fetch("player_points.json")
+fetch("/player_points.json")
 .then(r=>r.json())
 .then(data=>{
 allPlayersData=getSortedPlayers(data);
