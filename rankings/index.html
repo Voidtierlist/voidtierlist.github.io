@@ -31,6 +31,8 @@
         <a href="/testers.html">Testers</a>
     </div>
 
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation menu">☰</button>
+
     <div class="nav-right">
         <div class="search-wrapper">
             <input type="text" id="searchInput" placeholder="Search player...">
@@ -39,6 +41,15 @@
 
 </div>
 <div id="searchResults" class="search-results"></div>
+
+<div id="mobileNavBackdrop" class="mobile-nav-backdrop" hidden></div>
+<nav id="mobileNav" class="mobile-nav-drawer" aria-hidden="true">
+    <button id="mobileNavClose" class="mobile-nav-close" type="button" aria-label="Close navigation menu">✕</button>
+    <a href="/">Home</a>
+    <a href="/rankings" class="active">Rankings</a>
+    <a href="https://dc.gg/voidtierlist" target="_blank" rel="noopener noreferrer">Discord</a>
+    <a href="/testers">Testers</a>
+</nav>
 
 <!-- =========================
         GAMEMODE BAR
@@ -116,7 +127,7 @@
                 Information
             </button>
 
-            <div id="infoPanel" class="info-panel hidden" role="dialog" aria-label="Achievement titles information">
+            <div id="infoPanel" class="info-panel" role="dialog" aria-label="Achievement titles information">
                 <div class="info-panel-tabs">
                     <button class="info-panel-tab active" type="button">Titles</button>
                 </div>

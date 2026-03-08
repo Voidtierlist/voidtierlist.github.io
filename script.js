@@ -364,6 +364,7 @@ setActiveModeButton(mode);
 if(fromButton){
 const selectedButton=document.querySelector(`.mode[data-mode="${mode}"]`);
 animateModeSelection(selectedButton);
+selectedButton?.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
 }
 
 if(syncUrl){
@@ -386,6 +387,50 @@ hideLeaderboardUpdateState();
 },170);
 }
 
+
+function setupMobileMenu(){
+const toggle=document.getElementById("mobileMenuToggle");
+const drawer=document.getElementById("mobileNav");
+const backdrop=document.getElementById("mobileNavBackdrop");
+const closeBtn=document.getElementById("mobileNavClose");
+
+if(!toggle || !drawer || !backdrop) return;
+
+const closeMenu=()=>{
+ drawer.classList.remove("is-open");
+ drawer.setAttribute("aria-hidden","true");
+ toggle.setAttribute("aria-expanded","false");
+ backdrop.hidden=true;
+ document.body.classList.remove("mobile-menu-open");
+};
+
+const openMenu=()=>{
+ drawer.classList.add("is-open");
+ drawer.setAttribute("aria-hidden","false");
+ toggle.setAttribute("aria-expanded","true");
+ backdrop.hidden=false;
+ document.body.classList.add("mobile-menu-open");
+};
+
+toggle.addEventListener("click",()=>{
+ const isOpen=drawer.classList.contains("is-open");
+ if(isOpen){
+   closeMenu();
+   return;
+ }
+ openMenu();
+});
+
+closeBtn?.addEventListener("click",closeMenu);
+backdrop.addEventListener("click",closeMenu);
+drawer.querySelectorAll("a").forEach(link=>link.addEventListener("click",closeMenu));
+
+document.addEventListener("keydown",(event)=>{
+ if(event.key==="Escape"){
+   closeMenu();
+ }
+});
+}
 
 function setupInfoPanel(){
 const infoToggle=document.getElementById("infoToggle");
@@ -506,6 +551,7 @@ setActiveModeButton(currentMode);
 syncModeInUrl(currentMode,{replace:true});
 
 setupInfoPanel();
+setupMobileMenu();
 showPageLoader();
 loadPlayers();
 setInterval(loadPlayers,60000);

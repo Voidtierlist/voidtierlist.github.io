@@ -112,6 +112,73 @@ margin-left:4px;
 
 .nav-right{justify-self:end}
 
+.mobile-menu-toggle{
+display:none;
+width:42px;
+height:42px;
+border-radius:10px;
+border:1px solid #24406a;
+background:#0e1a31;
+color:#dce9ff;
+font-size:24px;
+line-height:1;
+cursor:pointer;
+}
+
+.mobile-nav-backdrop{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.52);
+z-index:80;
+}
+
+.mobile-nav-drawer{
+position:fixed;
+top:0;
+right:0;
+height:100vh;
+width:min(300px,82vw);
+padding:72px 18px 18px;
+background:linear-gradient(180deg,#0b1730,#081327);
+border-left:1px solid #17345f;
+box-shadow:-12px 0 30px rgba(0,0,0,.45);
+transform:translateX(100%);
+transition:transform .24s ease;
+z-index:90;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.mobile-nav-drawer.is-open{transform:translateX(0)}
+
+.mobile-nav-drawer a{
+text-decoration:none;
+color:#cfe0ff;
+font-weight:700;
+font-size:18px;
+padding:10px 8px;
+border-radius:10px;
+}
+
+.mobile-nav-drawer a.active{background:#112746;color:#fff}
+
+.mobile-nav-close{
+position:absolute;
+top:14px;
+right:14px;
+width:34px;
+height:34px;
+border-radius:8px;
+border:1px solid #29466f;
+background:#13233f;
+color:#dbe8ff;
+font-size:20px;
+cursor:pointer;
+}
+
+body.mobile-menu-open{overflow:hidden}
+
 .search-wrapper{position:relative;display:flex;align-items:center}
 
 .search-results{
@@ -190,15 +257,36 @@ pointer-events:none;
 
 @media (max-width:1024px){
 .topbar{
-grid-template-columns:1fr;
-justify-items:center;
-gap:12px;
-padding:12px;
+grid-template-columns:auto minmax(0,1fr) auto;
+gap:10px;
+padding:10px 12px;
 }
 
-.nav-right{justify-self:center}
+.logo img{height:42px;max-width:140px}
+.nav-links{display:none}
+.mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center}
 
-.nav-links a{font-size:15px}
+.nav-right{justify-self:stretch;min-width:0}
+#searchInput,
+.testers-page .search-wrapper #testerSearchInput{width:100%;font-size:16px;height:40px}
+
+.gamemode-bar{
+flex-wrap:nowrap;
+overflow-x:auto;
+padding-bottom:4px;
+scrollbar-width:thin;
+-webkit-overflow-scrolling:touch;
+scroll-snap-type:x proximity;
+}
+
+.mode{
+min-width:94px;
+height:58px;
+padding:8px 12px;
+scroll-snap-align:start;
+}
+
+.mode span{font-size:13px}
 }
 
 #searchInput::placeholder{color:#7b8eae}
@@ -857,6 +945,62 @@ font-size:13px;
 .tier-menu-grid{grid-template-columns:1fr}
 }
 
+@media (max-width: 760px){
+.page{padding:12px}
+.content-box{overflow:visible}
+.leaderboard-header{
+grid-template-columns:40px 1fr auto;
+padding:10px 12px;
+column-gap:10px;
+}
+
+.leaderboard-header .col-region,
+.leaderboard-header .col-tiers{display:none}
+
+.leaderboard-header .col-player{padding-left:0}
+.leaderboard-info-wrap{transform:none}
+
+.info-panel{
+left:0;
+right:auto;
+width:min(92vw,420px);
+max-height:68vh;
+overflow:auto;
+}
+
+.info-title-title{font-size:20px}
+.info-title-points{font-size:14px}
+.info-panel-tab{font-size:15px}
+.info-panel h4{font-size:14px}
+
+.player{
+grid-template-columns:42px minmax(0,1fr) auto;
+height:auto;
+row-gap:8px;
+padding:10px;
+align-items:flex-start;
+}
+
+.player::before,
+.player::after{display:none}
+.rank{font-size:34px;line-height:1.05}
+.info{gap:8px}
+.skin-wrap,.skin{width:50px;height:38px}
+.info-text h3{font-size:26px}
+.combat-rank-line{font-size:17px}
+.region{padding:6px 8px;font-size:13px;width:auto;min-width:46px}
+.tiers{grid-column:1 / -1;overflow-x:auto;padding-bottom:2px}
+.tier-circle{min-width:40px}
+.tier-bubble{width:31px;height:31px}
+.tier-bubble img{width:15px;height:15px}
+.tier-label{font-size:12px}
+}
+
+@media (max-width: 480px){
+.info-text h3{font-size:22px}
+.combat-rank-line{font-size:14px}
+}
+
 /* =========================
         TESTERS PAGE
 ========================= */
@@ -1063,12 +1207,27 @@ color: #a9bce1;
 }
 
 @media (max-width: 760px) {
+.testers-page .topbar{margin-bottom:12px}
 .testers-header {
 flex-direction: column;
-align-items: flex-start;
+align-items: stretch;
+gap:10px;
 }
 
+.testers-header h1{display:none}
+.testers-stats{gap:10px}
+.status-pill{justify-content:center;padding:12px;font-size:18px}
+
+.testers-page .search-wrapper{width:100%}
 #testerSearchInput {
-width: min(78vw, 340px);
+width:100%;
+height:48px;
+font-size:16px;
 }
+
+.testers-grid{grid-template-columns:1fr;gap:12px;margin-top:14px}
+.tester-card{padding:14px;border-radius:16px}
+.tester-meta h3{font-size:24px}
+.tester-status{font-size:18px;margin:3px 0}
+.tester-updated{font-size:13px}
 }

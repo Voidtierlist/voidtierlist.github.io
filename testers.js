@@ -17,6 +17,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let allTesters = [];
 
+  function setupMobileMenu() {
+    const toggle = document.getElementById("mobileMenuToggle");
+    const drawer = document.getElementById("mobileNav");
+    const backdrop = document.getElementById("mobileNavBackdrop");
+    const closeBtn = document.getElementById("mobileNavClose");
+
+    if (!toggle || !drawer || !backdrop) return;
+
+    const closeMenu = () => {
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      backdrop.hidden = true;
+      document.body.classList.remove("mobile-menu-open");
+    };
+
+    const openMenu = () => {
+      drawer.classList.add("is-open");
+      drawer.setAttribute("aria-hidden", "false");
+      toggle.setAttribute("aria-expanded", "true");
+      backdrop.hidden = false;
+      document.body.classList.add("mobile-menu-open");
+    };
+
+    toggle.addEventListener("click", () => {
+      if (drawer.classList.contains("is-open")) {
+        closeMenu();
+        return;
+      }
+      openMenu();
+    });
+
+    closeBtn?.addEventListener("click", closeMenu);
+    backdrop.addEventListener("click", closeMenu);
+    drawer.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+  }
+
+
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -59,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="tester-meta">
               <h3 title="${name}">${name}</h3>
               <p class="tester-status ${status.className}">${status.label}</p>
-              <p class="tester-updated">ID: ${tester.id}</p>
+              <p class="tester-updated">Updated: ${new Date().toLocaleTimeString()}</p>
             </div>
           </article>
         `;
@@ -83,6 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtered = allTesters.filter((tester) => tester.name.toLowerCase().includes(query));
     render(filtered);
   }
+
+  setupMobileMenu();
 
   fetch("/testers_status.json")
     .then((response) => {
