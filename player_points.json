@@ -587,5 +587,16 @@
                 "points": 1
             }
         }
+    },
+    "1347849097348124743": {
+        "mc_username": "D3ya_TR",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
