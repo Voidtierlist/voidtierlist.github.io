@@ -1,6 +1,12 @@
 {
     "testers": [
         {
+            "id": 1369246559832903772,
+            "name": "its_parsonal.",
+            "avatar": "https://cdn.discordapp.com/avatars/1369246559832903772/348d4c401bb4fbbd8ea3e8dcffd44ae4.png?size=1024",
+            "status": "offline"
+        },
+        {
             "id": 1388400982878322759,
             "name": "mahfuzfether.",
             "avatar": "https://cdn.discordapp.com/avatars/1388400982878322759/c31bb283d43183fc50056325f99700e6.png?size=1024",
@@ -52,12 +58,6 @@
             "id": 1372098282863726646,
             "name": "xmewgical_",
             "avatar": "https://cdn.discordapp.com/avatars/1372098282863726646/e36ba189461af85ae2ae2ebe8624e1a8.png?size=1024",
-            "status": "offline"
-        },
-        {
-            "id": 1369246559832903772,
-            "name": "its_parsonal.",
-            "avatar": "https://cdn.discordapp.com/avatars/1369246559832903772/348d4c401bb4fbbd8ea3e8dcffd44ae4.png?size=1024",
             "status": "offline"
         }
     ]
