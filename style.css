@@ -280,16 +280,20 @@ pointer-events:none;
 
 @media (max-width:1024px){
 .topbar{
-grid-template-columns:auto minmax(0,1fr) auto;
-gap:10px;
+grid-template-columns:minmax(0,1fr) auto;
+grid-template-areas:
+"logo menu"
+"search search";
+gap:10px 12px;
 padding:10px 12px;
 }
 
 .logo img{height:42px;max-width:140px}
+.logo{grid-area:logo}
 .nav-links{display:none}
-.mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+.mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;grid-area:menu;justify-self:end}
 
-.nav-right{justify-self:stretch;min-width:0}
+.nav-right{grid-area:search;justify-self:stretch;min-width:0}
 #searchInput,
 .testers-page .search-wrapper #testerSearchInput{width:100%;font-size:16px;height:40px}
 
