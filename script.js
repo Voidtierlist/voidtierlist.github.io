@@ -394,8 +394,8 @@ const infoPanel=document.getElementById("infoPanel");
 if(!infoToggle || !infoPanel) return;
 
 infoToggle.addEventListener("click",(event)=>{
-const willOpen=infoPanel.classList.contains("hidden");
-infoPanel.classList.toggle("hidden",!willOpen);
+const willOpen=!infoPanel.classList.contains("is-open");
+infoPanel.classList.toggle("is-open",willOpen);
 infoToggle.setAttribute("aria-expanded",String(willOpen));
 event.stopPropagation();
 });
@@ -405,8 +405,8 @@ event.stopPropagation();
 });
 
 document.addEventListener("click",()=>{
-if(infoPanel.classList.contains("hidden")) return;
-infoPanel.classList.add("hidden");
+if(!infoPanel.classList.contains("is-open")) return;
+infoPanel.classList.remove("is-open");
 infoToggle.setAttribute("aria-expanded","false");
 });
 }

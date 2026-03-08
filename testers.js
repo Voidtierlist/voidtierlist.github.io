@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.endsWith("/testers.html")) {
+    history.replaceState({}, "", "/testers");
+  }
+
   const testersGrid = document.getElementById("testersGrid");
   const onlineCountEl = document.getElementById("onlineCount");
   const totalCountEl = document.getElementById("totalCount");
@@ -48,12 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         return `
           <article class="tester-card">
-            <img class="tester-avatar" src="${tester.avatar}" alt="${name} avatar" loading="lazy">
+            <div class="tester-avatar-wrap">
+              <img class="tester-avatar" src="${tester.avatar}" alt="${name} avatar" loading="lazy">
+              <span class="status-dot ${status.className}" aria-hidden="true"></span>
+            </div>
             <div class="tester-meta">
               <h3 title="${name}">${name}</h3>
-              <p class="tester-status ${status.className}">
-                <span class="status-dot ${status.className}"></span>${status.label}
-              </p>
+              <p class="tester-status ${status.className}">${status.label}</p>
               <p class="tester-updated">ID: ${tester.id}</p>
             </div>
           </article>
@@ -63,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateCounts(testers) {
-    const onlineCount = testers.filter((tester) => tester.status === "online").length;
+    const onlineCount = testers.filter((tester) => ["online", "idle", "dnd"].includes(tester.status)).length;
     onlineCountEl.textContent = `${onlineCount} Online`;
     totalCountEl.textContent = String(testers.length);
   }
@@ -79,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     render(filtered);
   }
 
-  fetch("testers_status.json")
+  fetch("/testers_status.json")
     .then((response) => {
       if (!response.ok) throw new Error("Failed to load testers status data.");
       return response.json();
