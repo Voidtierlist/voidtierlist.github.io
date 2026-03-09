@@ -13,7 +13,7 @@
     "1369246559832903772": {
         "mc_username": "_ITEPERSONAL",
         "region": "AS",
-        "total_points": 14,
+        "total_points": 16,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
@@ -30,6 +30,10 @@
             "crystal": {
                 "tier": "LT5",
                 "points": 1
+            },
+            "axe": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
