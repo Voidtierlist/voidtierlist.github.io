@@ -642,11 +642,15 @@
     "1376226301802975372": {
         "mc_username": "PoleDoPokera_",
         "region": "EU",
-        "total_points": 10,
+        "total_points": 16,
         "gamemodes": {
             "sword": {
                 "tier": "HT3",
                 "points": 10
+            },
+            "mace": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
