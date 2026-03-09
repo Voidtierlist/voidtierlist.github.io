@@ -636,8 +636,13 @@
     "1439234876761968742": {
         "mc_username": "dark_everest",
         "region": "EU",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 6,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     },
     "1376226301802975372": {
         "mc_username": "PoleDoPokera_",
