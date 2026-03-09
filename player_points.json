@@ -525,8 +525,13 @@
     "1347794710194028567": {
         "mc_username": "Devilsggs",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1093072100870340650": {
         "mc_username": "Thunder_Furyy7",
