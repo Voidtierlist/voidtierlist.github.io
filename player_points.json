@@ -617,5 +617,16 @@
                 "points": 3
             }
         }
+    },
+    "1277939618897199116": {
+        "mc_username": "RayCanSolo_",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
