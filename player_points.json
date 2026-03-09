@@ -336,11 +336,15 @@
     "911943905405190205": {
         "mc_username": "LastR3venge",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 7,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "sword": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
