@@ -922,5 +922,16 @@
                 "points": 2
             }
         }
+    },
+    "1470279868548776008": {
+        "mc_username": "MrAxolotl_23",
+        "region": "AS",
+        "total_points": 4,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     }
 }
