@@ -133,11 +133,15 @@
     "1038860052196507659": {
         "mc_username": "DarkRavenX_",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 10,
         "gamemodes": {
             "sword": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "nethpot": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
