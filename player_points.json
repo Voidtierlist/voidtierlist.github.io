@@ -746,11 +746,11 @@
     "1201843228228198430": {
         "mc_username": "KInG_oP__",
         "region": "AS",
-        "total_points": 1,
+        "total_points": 2,
         "gamemodes": {
             "nethpot": {
-                "tier": "LT5",
-                "points": 1
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
