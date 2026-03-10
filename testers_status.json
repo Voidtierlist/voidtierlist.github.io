@@ -49,6 +49,12 @@
             "status": "offline"
         },
         {
+            "id": 1434456611002257418,
+            "name": "swjus_",
+            "avatar": "https://cdn.discordapp.com/avatars/1434456611002257418/f82ec85d02a4f547b3a399e50e00f807.png?size=1024",
+            "status": "idle"
+        },
+        {
             "id": 1085913320336396419,
             "name": "adsami",
             "avatar": "https://cdn.discordapp.com/avatars/1085913320336396419/f7880907981648f2d8cb11d3fc92c04e.png?size=1024",
@@ -82,12 +88,6 @@
             "id": 1372098282863726646,
             "name": "xmewgical_",
             "avatar": "https://cdn.discordapp.com/avatars/1372098282863726646/e36ba189461af85ae2ae2ebe8624e1a8.png?size=1024",
-            "status": "idle"
-        },
-        {
-            "id": 1434456611002257418,
-            "name": "swjus_",
-            "avatar": "https://cdn.discordapp.com/avatars/1434456611002257418/f82ec85d02a4f547b3a399e50e00f807.png?size=1024",
             "status": "idle"
         }
     ]
