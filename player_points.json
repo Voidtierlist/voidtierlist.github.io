@@ -366,11 +366,15 @@
     "1383041794572550228": {
         "mc_username": "itz_pillii",
         "region": "EU",
-        "total_points": 3,
+        "total_points": 7,
         "gamemodes": {
             "sword": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "axe": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
