@@ -602,17 +602,13 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 37,
+        "total_points": 31,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT3",
                 "points": 10
             },
             "sword": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "mace": {
                 "tier": "HT4",
                 "points": 4
             },
