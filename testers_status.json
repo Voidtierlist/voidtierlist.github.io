@@ -43,6 +43,12 @@
             "status": "online"
         },
         {
+            "id": 1246396951814082648,
+            "name": "bettercallvulkan",
+            "avatar": "https://cdn.discordapp.com/avatars/1246396951814082648/f6a7c5121e212ea1064099196cf2855a.png?size=1024",
+            "status": "dnd"
+        },
+        {
             "id": 1085913320336396419,
             "name": "adsami",
             "avatar": "https://cdn.discordapp.com/avatars/1085913320336396419/f7880907981648f2d8cb11d3fc92c04e.png?size=1024",
@@ -77,12 +83,6 @@
             "name": "xmewgical_",
             "avatar": "https://cdn.discordapp.com/avatars/1372098282863726646/e36ba189461af85ae2ae2ebe8624e1a8.png?size=1024",
             "status": "offline"
-        },
-        {
-            "id": 1246396951814082648,
-            "name": "bettercallvulkan",
-            "avatar": "https://cdn.discordapp.com/avatars/1246396951814082648/f6a7c5121e212ea1064099196cf2855a.png?size=1024",
-            "status": "dnd"
         }
     ]
 }
