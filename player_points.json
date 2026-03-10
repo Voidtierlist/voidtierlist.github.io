@@ -868,5 +868,16 @@
                 "points": 3
             }
         }
+    },
+    "1152853861174882395": {
+        "mc_username": "Anc1en7",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "smp": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
