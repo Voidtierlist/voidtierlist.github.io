@@ -19,6 +19,10 @@
                 "tier": "HT4",
                 "points": 4
             },
+            "axe": {
+                "tier": "HT5",
+                "points": 2
+            },
             "sword": {
                 "tier": "LT3",
                 "points": 6
@@ -30,10 +34,6 @@
             "crystal": {
                 "tier": "LT5",
                 "points": 1
-            },
-            "axe": {
-                "tier": "HT5",
-                "points": 2
             }
         }
     },
@@ -350,7 +350,7 @@
     },
     "1015604669118156830": {
         "mc_username": "ThePhant0mV0id",
-        "region": "NA",
+        "region": "AS",
         "total_points": 6,
         "gamemodes": {
             "sword": {
@@ -379,9 +379,13 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 16,
         "gamemodes": {
             "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
                 "tier": "LT3",
                 "points": 6
             },
@@ -678,6 +682,10 @@
         "region": "EU",
         "total_points": 38,
         "gamemodes": {
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
             "sword": {
                 "tier": "LT2",
                 "points": 20
@@ -687,10 +695,6 @@
                 "points": 6
             },
             "crystal": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "axe": {
                 "tier": "LT3",
                 "points": 6
             }
@@ -727,13 +731,13 @@
                 "tier": "LT3",
                 "points": 6
             },
-            "crystal": {
-                "tier": "HT4",
-                "points": 4
-            },
             "mace": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
@@ -821,5 +825,17 @@
                 "points": 2
             }
         }
+    },
+    "1368079447965569156": {
+        "mc_username": "Mr_Spidy_YT",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1304495927699963915": {
+        "mc_username": "ITSAAYUSH89",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
