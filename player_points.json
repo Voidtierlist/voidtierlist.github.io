@@ -909,8 +909,13 @@
     "1189813110161285273": {
         "mc_username": "Doxy_333",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     },
     "1384823976898854923": {
         "mc_username": "SlicerX1",
