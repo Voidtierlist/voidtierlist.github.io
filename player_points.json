@@ -293,7 +293,7 @@
     "996427837986852994": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 39,
+        "total_points": 41,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -308,8 +308,8 @@
                 "points": 6
             },
             "mace": {
-                "tier": "HT5",
-                "points": 2
+                "tier": "HT4",
+                "points": 4
             },
             "crystal": {
                 "tier": "LT4",
@@ -602,7 +602,7 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 41,
+        "total_points": 37,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT3",
@@ -621,10 +621,6 @@
                 "points": 3
             },
             "uhc": {
-                "tier": "HT4",
-                "points": 4
-            },
-            "diamond smp": {
                 "tier": "HT4",
                 "points": 4
             },
