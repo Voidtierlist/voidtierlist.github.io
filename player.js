@@ -23,19 +23,6 @@ const TIER_ORDER = {
     LT5:9
 };
 
-const TIER_TEXT_COLORS={
-    HT1:"#6D5D2C",
-    LT1:"#584C25",
-    HT2:"#5E6979",
-    LT2:"#4A505A",
-    HT3:"#6B4B36",
-    LT3:"#593722",
-    HT4:"#303144",
-    LT4:"#2C2E40",
-    HT5:"#556CA8",
-    LT5:"#262A3A"
-};
-
 const COMBAT_RANKS = [
     { minPoints: 400, title: "Combat Grandmaster", icon: "https://mctiers.com/titles/combat_grandmaster.webp" },
     { minPoints: 250, title: "Combat Master", icon: "https://mctiers.com/titles/combat_master.webp" },
@@ -55,13 +42,6 @@ function getTierOrderValue(tier){
 
     const normalizedTier=tier.toUpperCase().trim();
     return TIER_ORDER[normalizedTier] ?? Number.POSITIVE_INFINITY;
-}
-
-function getTierRankClass(tier){
-    if(!tier) return "";
-
-    const normalizedTier=tier.toUpperCase().trim();
-    return TIER_TEXT_COLORS[normalizedTier] ? `tier-rank-${normalizedTier}` : "";
 }
 
 function getCombatRank(points){
@@ -158,7 +138,7 @@ fetch("player_points.json")
 
         card.innerHTML=`
             <img class="tier-icon" src="${icon}">
-            <span class="tier-rank ${getTierRankClass(gmData.tier)}">${gmData.tier}</span>
+            <span class="tier-rank">${gmData.tier}</span>
         `;
 
 

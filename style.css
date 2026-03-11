@@ -763,17 +763,6 @@ display:flex;align-items:center;justify-content:center;
 .tier-bubble img{width:17px;height:17px}
 .tier-label{font-size:14px;color:#f1bb4c;font-weight:800;margin-top:2px;line-height:1}
 
-.tier-label-HT1,.tier-rank-HT1{color:#6D5D2C}
-.tier-label-LT1,.tier-rank-LT1{color:#584C25}
-.tier-label-HT2,.tier-rank-HT2{color:#5E6979}
-.tier-label-LT2,.tier-rank-LT2{color:#4A505A}
-.tier-label-HT3,.tier-rank-HT3{color:#6B4B36}
-.tier-label-LT3,.tier-rank-LT3{color:#593722}
-.tier-label-HT4,.tier-rank-HT4{color:#303144}
-.tier-label-LT4,.tier-rank-LT4{color:#2C2E40}
-.tier-label-HT5,.tier-rank-HT5{color:#556CA8}
-.tier-label-LT5,.tier-rank-LT5{color:#262A3A}
-
 .info-text .not-tested{font-size:15px;color:var(--accent);font-weight:700}
 
 #playerModal{position:fixed;inset:0;background:rgba(5,10,20,.86);backdrop-filter:blur(6px);display:flex;justify-content:center;align-items:center;padding:clamp(10px,2.5vh,20px);opacity:0;pointer-events:none;transition:opacity .2s ease}
