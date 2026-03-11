@@ -952,11 +952,15 @@
     "1470279868548776008": {
         "mc_username": "MrAxolotl_23",
         "region": "AS",
-        "total_points": 4,
+        "total_points": 10,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
                 "points": 4
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     }
