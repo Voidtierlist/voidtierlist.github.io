@@ -485,8 +485,13 @@
     "845966796808257547": {
         "mc_username": "Zypher0n",
         "region": "EU",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1455344976153149544": {
         "mc_username": "R3CoiiLz",
