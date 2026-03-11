@@ -431,6 +431,8 @@ border-radius:16px;
 margin-top:0;
 overflow:hidden;
 background:linear-gradient(180deg,#09152b,#081428);
+position:relative;
+isolation:isolate;
 }
 
 .leaderboard-header{
@@ -444,7 +446,7 @@ color:#5f769f;
 font-size:14px;
 border-bottom:1px solid #112545;
 position:relative;
-z-index:5;
+z-index:30;
 }
 
 .leaderboard-header .col-player{
@@ -531,7 +533,7 @@ border-radius:12px;
 border:1px solid #1a365d;
 background:linear-gradient(180deg,#0e1d36,#0a162b);
 box-shadow:0 16px 30px rgba(0,0,0,.35);
-z-index:20;
+z-index:200;
 opacity:0;
 visibility:hidden;
 pointer-events:none;
@@ -569,7 +571,7 @@ transition:opacity .24s ease-in-out,transform .24s ease-in-out,visibility 0s;
 
 #leaderboard{padding:6px 10px 10px}
 
-#leaderboard{position:relative;z-index:1}
+#leaderboard{position:relative;z-index:10}
 
 #leaderboard.is-updating{
 opacity:.55;
