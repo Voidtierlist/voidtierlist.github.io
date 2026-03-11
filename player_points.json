@@ -401,11 +401,11 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 17,
+        "total_points": 15,
         "gamemodes": {
             "sword": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT4",
+                "points": 4
             },
             "mace": {
                 "tier": "LT3",
