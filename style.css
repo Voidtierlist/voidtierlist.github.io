@@ -972,6 +972,27 @@ font-size:13px;
 
 @media (max-width: 760px){
 .tier-menu-grid{grid-template-columns:1fr}
+
+.gamemode-bar{
+flex-wrap:nowrap;
+overflow-x:auto;
+gap:8px;
+padding:2px 0 6px;
+scrollbar-width:thin;
+-webkit-overflow-scrolling:touch;
+}
+
+.mode{
+min-width:52px;
+width:52px;
+height:44px;
+padding:8px;
+border-radius:12px;
+gap:0;
+}
+
+.mode span{display:none}
+.mode img{width:20px;height:20px}
 }
 
 @media (max-width: 760px){
