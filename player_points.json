@@ -993,7 +993,7 @@
     "1470279868548776008": {
         "mc_username": "MrAxolotl_23",
         "region": "AS",
-        "total_points": 11,
+        "total_points": 12,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
@@ -1004,6 +1004,10 @@
                 "points": 6
             },
             "mace": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "crystal": {
                 "tier": "LT5",
                 "points": 1
             }
