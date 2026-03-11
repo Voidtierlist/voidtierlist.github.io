@@ -1022,5 +1022,16 @@
                 "points": 3
             }
         }
+    },
+    "1143443530396729354": {
+        "mc_username": "necrovaine",
+        "region": "AS",
+        "total_points": 1,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     }
 }
