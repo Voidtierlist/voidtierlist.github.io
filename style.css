@@ -443,6 +443,8 @@ font-weight:800;
 color:#5f769f;
 font-size:14px;
 border-bottom:1px solid #112545;
+position:relative;
+z-index:5;
 }
 
 .leaderboard-header .col-player{
@@ -566,6 +568,8 @@ transition:opacity .24s ease-in-out,transform .24s ease-in-out,visibility 0s;
 .rank-rookie{color:#c3ccdb}
 
 #leaderboard{padding:6px 10px 10px}
+
+#leaderboard{position:relative;z-index:1}
 
 #leaderboard.is-updating{
 opacity:.55;
