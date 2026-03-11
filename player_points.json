@@ -900,8 +900,13 @@
     "1368079447965569156": {
         "mc_username": "Mr_Spidy_YT",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "mace": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1304495927699963915": {
         "mc_username": "ITSAAYUSH89",
