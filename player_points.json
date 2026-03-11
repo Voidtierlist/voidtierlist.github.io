@@ -988,5 +988,16 @@
                 "points": 6
             }
         }
+    },
+    "1361443683341307957": {
+        "mc_username": "Zenostrix_",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
