@@ -566,8 +566,13 @@
     "1093072100870340650": {
         "mc_username": "Thunder_Furyy7",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 4,
+        "gamemodes": {
+            "mace": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
     },
     "1388400982878322759": {
         "mc_username": "Mahfuzfether",
