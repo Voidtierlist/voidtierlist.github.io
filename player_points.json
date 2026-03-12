@@ -871,13 +871,17 @@
     "1368079447965569156": {
         "mc_username": "Mr_Spidy_YT",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
                 "points": 2
             },
             "mace": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "uhc": {
                 "tier": "LT5",
                 "points": 1
             }
