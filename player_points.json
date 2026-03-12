@@ -752,25 +752,8 @@
     "1376226301802975372": {
         "mc_username": "PoleDoPokera_",
         "region": "EU",
-        "total_points": 42,
-        "gamemodes": {
-            "axe": {
-                "tier": "HT3",
-                "points": 10
-            },
-            "sword": {
-                "tier": "LT2",
-                "points": 20
-            },
-            "mace": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "crystal": {
-                "tier": "LT3",
-                "points": 6
-            }
-        }
+        "total_points": 0,
+        "gamemodes": {}
     },
     "1178309268399726647": {
         "mc_username": "_BetterSafi",
@@ -851,29 +834,8 @@
     "1394000999630504007": {
         "mc_username": "UNFAZED_DEVEL",
         "region": "AS",
-        "total_points": 34,
-        "gamemodes": {
-            "nethpot": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "axe": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "sword": {
-                "tier": "HT3",
-                "points": 10
-            },
-            "mace": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "crystal": {
-                "tier": "LT3",
-                "points": 6
-            }
-        }
+        "total_points": 0,
+        "gamemodes": {}
     },
     "1379503229402087524": {
         "mc_username": "Allahhhuakhbarrr",
@@ -1110,5 +1072,11 @@
                 "points": 6
             }
         }
+    },
+    "1466891205257330708": {
+        "mc_username": "MeMwmga",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
