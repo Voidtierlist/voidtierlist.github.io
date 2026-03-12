@@ -612,8 +612,13 @@
     "1433510641540530257": {
         "mc_username": "Decal_",
         "region": "EU",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     },
     "1177547416975716453": {
         "mc_username": "ywun",
