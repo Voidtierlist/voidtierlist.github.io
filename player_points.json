@@ -1017,8 +1017,13 @@
     "1126607923011928074": {
         "mc_username": "Audi1066",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1433765449476214919": {
         "mc_username": "_Thorfin",
