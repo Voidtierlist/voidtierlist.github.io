@@ -1046,11 +1046,11 @@
     "1126607923011928074": {
         "mc_username": "Audi1066",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
             "crystal": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
