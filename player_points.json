@@ -735,11 +735,15 @@
     "1277939618897199116": {
         "mc_username": "RayCanSolo_",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 9,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
