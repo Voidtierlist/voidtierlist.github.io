@@ -1034,8 +1034,13 @@
     "942025990912245790": {
         "mc_username": "ZenithFlux",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 3,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     },
     "1102190355388051526": {
         "mc_username": "inferno_x",
