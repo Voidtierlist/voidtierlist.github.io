@@ -43,10 +43,16 @@
             "status": "offline"
         },
         {
-            "id": 1085913320336396419,
-            "name": "adsami",
-            "avatar": "https://cdn.discordapp.com/avatars/1085913320336396419/f7880907981648f2d8cb11d3fc92c04e.png?size=1024",
+            "id": 1478722448370438215,
+            "name": "ascalonismine",
+            "avatar": "",
             "status": "online"
+        },
+        {
+            "id": 1471048137584939212,
+            "name": "baloch_op3",
+            "avatar": "https://cdn.discordapp.com/avatars/1471048137584939212/dfd5dd3cefdae6f4820fa9a9f98a3f86.png?size=1024",
+            "status": "offline"
         },
         {
             "id": 953199568516960326,
@@ -61,22 +67,10 @@
             "status": "idle"
         },
         {
-            "id": 1471048137584939212,
-            "name": "baloch_op3",
-            "avatar": "https://cdn.discordapp.com/avatars/1471048137584939212/dfd5dd3cefdae6f4820fa9a9f98a3f86.png?size=1024",
-            "status": "offline"
-        },
-        {
             "id": 1015604669118156830,
             "name": "phat0mv0id",
             "avatar": "https://cdn.discordapp.com/avatars/1015604669118156830/bb42f1c61dbdfc0a21b0d0e68cf1a460.png?size=1024",
             "status": "offline"
-        },
-        {
-            "id": 1478722448370438215,
-            "name": "ascalonismine",
-            "avatar": "https://cdn.discordapp.com/embed/avatars/4.png",
-            "status": "online"
         }
     ]
 }
