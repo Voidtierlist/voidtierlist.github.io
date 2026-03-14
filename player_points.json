@@ -828,8 +828,13 @@
     "1280130936138104940": {
         "mc_username": "LostInWorld",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1163627145067765770": {
         "mc_username": "Faithful_playz",
