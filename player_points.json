@@ -11,7 +11,7 @@
         }
     },
     "1369246559832903772": {
-        "mc_username": "_ITEPERSONAL",
+        "mc_username": "_ITSPERSONAL",
         "region": "AS",
         "total_points": 16,
         "gamemodes": {
@@ -374,7 +374,7 @@
     },
     "1383041794572550228": {
         "mc_username": "itz_pillii",
-        "region": "EU",
+        "region": "AS",
         "total_points": 7,
         "gamemodes": {
             "axe": {
@@ -507,33 +507,17 @@
     "1085913320336396419": {
         "mc_username": "AD_Sami220",
         "region": "AS",
-        "total_points": 35,
+        "total_points": 20,
         "gamemodes": {
             "nethpot": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT3",
+                "points": 10
             },
             "sword": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT4",
+                "points": 4
             },
             "mace": {
-                "tier": "HT4",
-                "points": 4
-            },
-            "crystal": {
-                "tier": "HT4",
-                "points": 4
-            },
-            "uhc": {
-                "tier": "LT4",
-                "points": 3
-            },
-            "diamond pot": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "smp": {
                 "tier": "LT3",
                 "points": 6
             }
@@ -542,7 +526,7 @@
     "953199568516960326": {
         "mc_username": "ht3_sachin1",
         "region": "AS",
-        "total_points": 32,
+        "total_points": 28,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -557,8 +541,8 @@
                 "points": 6
             },
             "smp": {
-                "tier": "HT3",
-                "points": 10
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
@@ -737,7 +721,7 @@
         }
     },
     "1277939618897199116": {
-        "mc_username": "RayCanSolo_",
+        "mc_username": "Raycansolo_",
         "region": "AS",
         "total_points": 9,
         "gamemodes": {
@@ -1079,13 +1063,13 @@
         "gamemodes": {}
     },
     "1361652687539535953": {
-        "mc_username": "legomanasd",
+        "mc_username": "Legomanasd",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
     },
     "1350781610961801226": {
-        "mc_username": "PLAYNGANDCHEATIN",
+        "mc_username": "LegomanASD",
         "region": "AS",
         "total_points": 6,
         "gamemodes": {
@@ -1188,6 +1172,18 @@
     },
     "1475698419464011880": {
         "mc_username": "Spydrrrrrrrr",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "850740085342601227": {
+        "mc_username": "NoobDetector_",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1281843779967385623": {
+        "mc_username": "__zra",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
