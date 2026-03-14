@@ -1187,5 +1187,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1381191410480320582": {
+        "mc_username": "_ITSPERSONAL",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
