@@ -1021,9 +1021,13 @@
     "1437546302429986847": {
         "mc_username": "yt_lilcraft06",
         "region": "EU",
-        "total_points": 6,
+        "total_points": 12,
         "gamemodes": {
             "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "axe": {
                 "tier": "LT3",
                 "points": 6
             }
