@@ -591,15 +591,15 @@
     "1388400982878322759": {
         "mc_username": "Mahfuzfether",
         "region": "AS",
-        "total_points": 9,
+        "total_points": 10,
         "gamemodes": {
             "crystal": {
                 "tier": "LT3",
                 "points": 6
             },
             "sword": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
