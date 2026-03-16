@@ -760,15 +760,15 @@
         "region": "EU",
         "total_points": 18,
         "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
             "axe": {
                 "tier": "LT3",
                 "points": 6
             },
             "sword": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             }
@@ -1027,11 +1027,11 @@
         "region": "EU",
         "total_points": 12,
         "gamemodes": {
-            "sword": {
+            "axe": {
                 "tier": "LT3",
                 "points": 6
             },
-            "axe": {
+            "sword": {
                 "tier": "LT3",
                 "points": 6
             }
@@ -1281,6 +1281,24 @@
     "1473951905683083400": {
         "mc_username": "LeadDevils",
         "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1369234136400662568": {
+        "mc_username": "its_RusheRYT",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1414634889784852560": {
+        "mc_username": "ar0ubaku",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1482044843122364649": {
+        "mc_username": "ItzM00n_",
+        "region": "EU",
         "total_points": 0,
         "gamemodes": {}
     }
