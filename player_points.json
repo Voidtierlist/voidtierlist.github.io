@@ -884,7 +884,7 @@
     "1379503229402087524": {
         "mc_username": "Allahhhuakhbarr",
         "region": "AS",
-        "total_points": 11,
+        "total_points": 13,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
@@ -903,6 +903,10 @@
                 "points": 1
             },
             "uhc": {
+                "tier": "HT5",
+                "points": 2
+            },
+            "smp": {
                 "tier": "HT5",
                 "points": 2
             }
