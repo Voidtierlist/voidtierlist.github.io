@@ -915,11 +915,11 @@
     "1368079447965569156": {
         "mc_username": "Mr_Spidy_YT",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 5,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT5",
-                "points": 2
+                "tier": "LT5",
+                "points": 1
             },
             "mace": {
                 "tier": "LT5",
