@@ -690,7 +690,7 @@
     "1238791706745503795": {
         "mc_username": "ZedMc_YT",
         "region": "AS",
-        "total_points": 10,
+        "total_points": 11,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
@@ -705,8 +705,8 @@
                 "points": 2
             },
             "uhc": {
-                "tier": "LT5",
-                "points": 1
+                "tier": "HT5",
+                "points": 2
             },
             "diamond pot": {
                 "tier": "HT5",
