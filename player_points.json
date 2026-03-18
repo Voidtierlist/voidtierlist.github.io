@@ -737,11 +737,15 @@
     "1347849097348124743": {
         "mc_username": "D3ya_TR",
         "region": "NA",
-        "total_points": 3,
+        "total_points": 5,
         "gamemodes": {
             "sword": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "nethpot": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
