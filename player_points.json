@@ -205,14 +205,6 @@
         "region": "AS",
         "total_points": 9,
         "gamemodes": {
-            "sword": {
-                "tier": "HT5",
-                "points": 2
-            },
-            "uhc": {
-                "tier": "LT4",
-                "points": 3
-            },
             "nethpot": {
                 "tier": "HT5",
                 "points": 2
@@ -220,6 +212,14 @@
             "axe": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
@@ -318,15 +318,15 @@
     "996427837986852994": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 41,
+        "total_points": 43,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
                 "points": 6
             },
             "axe": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "LT3",
+                "points": 6
             },
             "sword": {
                 "tier": "LT3",
