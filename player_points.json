@@ -956,15 +956,15 @@
     "1218230866036391966": {
         "mc_username": "_DarkSiderOP",
         "region": "AS",
-        "total_points": 17,
+        "total_points": 20,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
                 "points": 4
             },
             "axe": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "LT3",
+                "points": 6
             },
             "sword": {
                 "tier": "HT4",
