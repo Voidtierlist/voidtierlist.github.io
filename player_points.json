@@ -702,7 +702,7 @@
     "1238791706745503795": {
         "mc_username": "ZedMc_YT",
         "region": "AS",
-        "total_points": 11,
+        "total_points": 15,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT5",
@@ -727,6 +727,10 @@
             "smp": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "mace": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
