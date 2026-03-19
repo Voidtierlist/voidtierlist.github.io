@@ -376,7 +376,7 @@
     "1015604669118156830": {
         "mc_username": "ThePhant0mV0id",
         "region": "NA",
-        "total_points": 12,
+        "total_points": 15,
         "gamemodes": {
             "sword": {
                 "tier": "LT3",
@@ -387,6 +387,10 @@
                 "points": 3
             },
             "smp": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "nethpot": {
                 "tier": "LT4",
                 "points": 3
             }
