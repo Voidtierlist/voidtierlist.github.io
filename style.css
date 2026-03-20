@@ -1,11 +1,11 @@
 :root{
---bg:#030a16;
---panel:#071223;
---panel-soft:#0b1830;
---border:#152748;
---text:#dbe7ff;
---muted:#8396bc;
---accent:#ffd25a;
+--bg:#040d1d;
+--panel:#071427;
+--panel-soft:#0c1a33;
+--border:#163156;
+--text:#dbe8ff;
+--muted:#8298be;
+--accent:#f5bf4c;
 --font-display:'Space Grotesk',Inter,sans-serif;
 }
 
@@ -15,7 +15,7 @@ body{
 margin:0;
 font-family:'Inter',sans-serif;
 color:var(--text);
-background:radial-gradient(circle at 50% -10%,#0d1d3a 0%,#060f22 40%,#030915 100%);
+background:radial-gradient(circle at 50% -14%,#102646 0%,#07162f 36%,#040b19 100%);
 }
 
 .page{
@@ -33,8 +33,8 @@ min-height:74px;
 padding:8px 18px;
 border-radius:14px;
 background:linear-gradient(180deg,rgba(10,22,42,.96),rgba(7,17,32,.9));
-border:1px solid #173763;
-box-shadow:0 12px 28px rgba(0,0,0,.4),inset 0 0 0 1px rgba(83,116,175,.14);
+border:1px solid #163156;
+box-shadow:0 12px 28px rgba(0,0,0,.42),inset 0 0 0 1px rgba(80,113,173,.14);
 }
 
 .logo{
@@ -371,14 +371,14 @@ min-width:110px;
 height:64px;
 padding:10px 16px;
 border-radius:18px;
-border:1px solid #17385f;
-background:linear-gradient(180deg,#0a1830,#081327);
+border:1px solid #163156;
+background:linear-gradient(180deg,#0c1b35,#09162c);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 gap:8px;
-color:#6f84ad;
+color:#6e86b2;
 font-size:14px;
 font-weight:800;
 font-family:var(--font-display);
@@ -390,8 +390,8 @@ transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease, backg
 
 .mode.active{
 color:#fff;
-background:linear-gradient(180deg,#1a3052,#112342);
-border-color:#35578f;
+background:linear-gradient(180deg,#1a3357,#122747);
+border-color:#2f538a;
 box-shadow:inset 0 -3px 0 #fff,0 10px 20px rgba(2,8,18,.52);
 }
 
@@ -426,10 +426,10 @@ margin:12px 4px 0;
 }
 
 .content-box{
-border:1px solid #17345d;
+border:1px solid #163156;
 border-radius:16px;
 margin-top:0;
-overflow:hidden;
+overflow:visible;
 background:linear-gradient(180deg,#09162d,#071124);
 position:relative;
 isolation:isolate;
@@ -571,7 +571,7 @@ transition:opacity .24s ease-in-out,transform .24s ease-in-out,visibility 0s;
 
 #leaderboard{padding:6px 10px 10px}
 
-#leaderboard{position:relative;z-index:10}
+#leaderboard{position:relative}
 
 #leaderboard.is-updating{
 opacity:.55;
@@ -609,7 +609,7 @@ cursor:pointer;
 transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
 position:relative;
 isolation:isolate;
-overflow:hidden;
+overflow:visible;
 }
 
 .player:hover{
