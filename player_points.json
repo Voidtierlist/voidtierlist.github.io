@@ -1366,5 +1366,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1413884945239249048": {
+        "mc_username": "jerbear_exe",
+        "region": "NA",
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
