@@ -749,19 +749,78 @@ border-radius:10px;
 .region-SA{background:#5c3a1d;color:#ffbc6a}
 .region-OC{background:#4a2268;color:#dd91ff}
 
-.tiers{display:flex;gap:8px;overflow:hidden}
+.tiers{display:flex;gap:8px;overflow:visible}
 
-.tier-circle{display:flex;flex-direction:column;align-items:center;min-width:44px}
+.tier-circle{
+display:flex;
+flex-direction:column;
+align-items:center;
+min-width:44px;
+position:relative;
+outline:none;
+}
 
 .tier-bubble{
 width:35px;height:35px;border-radius:50%;
 background:radial-gradient(circle at 30% 30%,#142746,#0a1322);
 border:1px solid #395177;
 display:flex;align-items:center;justify-content:center;
+transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,filter .2s ease;
 }
 
 .tier-bubble img{width:17px;height:17px}
 .tier-label{font-size:14px;color:#f1bb4c;font-weight:800;margin-top:2px;line-height:1}
+
+.tier-tooltip{
+position:absolute;
+left:50%;
+bottom:calc(100% + 8px);
+transform:translate(-50%,4px) scale(.96);
+transform-origin:bottom center;
+padding:8px 10px;
+border-radius:9px;
+background:linear-gradient(180deg,#0f213f,#0a1730);
+border:1px solid #2a4e84;
+box-shadow:0 10px 20px rgba(0,0,0,.38);
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+white-space:nowrap;
+display:flex;
+flex-direction:column;
+gap:2px;
+z-index:40;
+transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;
+}
+
+.tier-tooltip-name{
+font-size:12px;
+line-height:1.05;
+font-weight:800;
+color:#eaf2ff;
+}
+
+.tier-tooltip-points{
+font-size:11px;
+font-weight:700;
+color:#7eb5ff;
+}
+
+.tier-circle:hover .tier-bubble,
+.tier-circle:focus-visible .tier-bubble{
+transform:translateY(-1px) scale(1.08);
+border-color:#4e73ab;
+box-shadow:0 6px 16px rgba(9,22,46,.52);
+filter:brightness(1.08);
+}
+
+.tier-circle:hover .tier-tooltip,
+.tier-circle:focus-visible .tier-tooltip{
+opacity:1;
+visibility:visible;
+transform:translate(-50%,0) scale(1);
+transition:opacity .18s ease,transform .18s ease,visibility 0s;
+}
 
 .info-text .not-tested{font-size:15px;color:var(--accent);font-weight:700}
 
