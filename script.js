@@ -44,6 +44,19 @@ HT5:8,
 LT5:9
 };
 
+const TIER_POINTS = {
+HT1:60,
+LT1:45,
+HT2:30,
+LT2:20,
+HT3:10,
+LT3:6,
+HT4:4,
+LT4:3,
+HT5:2,
+LT5:1
+};
+
 const COMBAT_RANKS = [
 { minPoints: 400, title: "Combat Grandmaster", icon: "https://mctiers.com/titles/combat_grandmaster.webp" },
 { minPoints: 250, title: "Combat Master", icon: "https://mctiers.com/titles/combat_master.webp" },
@@ -156,6 +169,22 @@ const normalizedTier=tier.toUpperCase().trim();
 return TIER_ORDER[normalizedTier] ?? Number.POSITIVE_INFINITY;
 }
 
+function getTierTooltipData(tier){
+const normalizedTier=(tier || "-").toUpperCase().trim();
+
+if(normalizedTier==="-" || !(normalizedTier in TIER_POINTS)){
+return {
+label:"Untested",
+pointsText:"No points"
+};
+}
+
+return {
+label:normalizedTier,
+pointsText:`${TIER_POINTS[normalizedTier]} points`
+};
+}
+
 function getSortedModesForPlayer(player){
 const testedModes=[];
 const untestedModes=[];
@@ -217,13 +246,18 @@ const icon=GAMEMODE_ICONS[mode];
 if(!icon) return;
 
 const opacity=tier==="-" ? "0.35" : "1";
+const tooltipData=getTierTooltipData(tier);
 
 tiersHTML+=`
-<div class="tier-circle">
+<div class="tier-circle" tabindex="0" role="img" aria-label="${tooltipData.label}: ${tooltipData.pointsText}">
 <div class="tier-bubble" style="opacity:${opacity}">
 <img src="${icon}">
 </div>
 <div class="tier-label">${tier}</div>
+<div class="tier-tooltip" aria-hidden="true">
+<span class="tier-tooltip-name">${tooltipData.label}</span>
+<span class="tier-tooltip-points">${tooltipData.pointsText}</span>
+</div>
 </div>`;
 });
 
