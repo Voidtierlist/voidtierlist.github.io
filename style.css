@@ -237,8 +237,8 @@ border-width:2px;
 width:250px;
 height:40px;
 border-radius:20px;
-background:#0d1b33;
-border:1px solid #1b2f53;
+background:#1A222F;
+border:1px solid #253246;
 color:#cfe0ff;
 padding:0 50px 0 42px;
 font-size:13px;
@@ -960,7 +960,7 @@ justify-content:space-between;
 gap:8px;
 padding:8px 10px;
 border-bottom:1px solid #17355f;
-background:#121822;
+background:#1A222F;
 cursor:pointer;
 transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
 position:relative;
@@ -1181,8 +1181,8 @@ flex-shrink: 0;
 width:250px;
 height:36px;
 border-radius:12px;
-background:#0b172c;
-border:1px solid #284267;
+background:#1A222F;
+border:1px solid #253246;
 color:#d6e4ff;
 padding:0 14px 0 38px;
 font-size:18px;
@@ -1192,9 +1192,9 @@ transition:border-color .24s ease-in-out,box-shadow .24s ease-in-out,background 
 }
 
 .testers-page .search-wrapper #testerSearchInput:focus{
-border-color:#3b5f94;
-box-shadow:0 0 0 3px rgba(59,95,148,.2);
-background:#0c1b33;
+border-color:#3c4d67;
+box-shadow:0 0 0 3px rgba(60,77,103,.22);
+background:#202a39;
 }
 
 .testers-page .search-wrapper .search-icon{
@@ -1220,10 +1220,10 @@ display: flex;
 align-items: center;
 gap: 14px;
 padding: 14px;
-background: linear-gradient(180deg, #060f20, #050b18);
-border: 1px solid #132749;
+background: #1A222F;
+border: 1px solid #253246;
 border-radius: 14px;
-box-shadow: inset 0 0 0 1px rgba(64, 96, 145, 0.14);
+box-shadow: inset 0 0 0 1px rgba(64, 96, 145, 0.08);
 }
 
 .tester-avatar-wrap{
