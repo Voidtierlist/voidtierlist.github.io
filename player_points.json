@@ -759,7 +759,7 @@
     "1277939618897199116": {
         "mc_username": "Raycansolo_",
         "region": "AS",
-        "total_points": 9,
+        "total_points": 11,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -768,6 +768,10 @@
             "uhc": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "sword": {
+                "tier": "HT5",
+                "points": 2
             }
         }
     },
