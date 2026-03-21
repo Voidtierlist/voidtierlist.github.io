@@ -603,17 +603,17 @@ height:78px;
 margin-bottom:7px;
 border:1px solid #16365f;
 border-radius:14px;
-background:#1E2939;
+background:#121822;
 padding:0 12px;
 cursor:pointer;
 transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
 position:relative;
 isolation:isolate;
-overflow:visible;
+overflow:hidden;
 }
 
 .player:hover{
-background:#253246;
+background:#172131;
 transform:translateY(-3px);
 box-shadow:0 10px 20px rgba(0,0,0,.3);
 }
@@ -960,9 +960,11 @@ justify-content:space-between;
 gap:8px;
 padding:8px 10px;
 border-bottom:1px solid #17355f;
-background:#1E2939;
+background:#121822;
 cursor:pointer;
 transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
+position:relative;
+overflow:hidden;
 }
 
 .tier-player-card:hover{
