@@ -1377,9 +1377,13 @@
     "1401533894590861525": {
         "mc_username": "RetiredNinja",
         "region": "AS",
-        "total_points": 1,
+        "total_points": 2,
         "gamemodes": {
             "nethpot": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "axe": {
                 "tier": "LT5",
                 "points": 1
             }
