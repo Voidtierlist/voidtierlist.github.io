@@ -82,10 +82,28 @@ const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 function getSkinBustSources(username){
 const safeUsername=encodeURIComponent(username);
 return [
+`https://minotar.net/armor/body/${safeUsername}/100.png`,
+`https://minotar.net/body/${safeUsername}/100.png`,
 `https://render.crafty.gg/3d/bust/${safeUsername}`,
 `https://mc-heads.net/body/${safeUsername}/right`,
 `https://crafatar.com/renders/body/${safeUsername}?overlay`
 ];
+}
+
+function createInitialFallbackDataUri(username){
+const initial=(username || "?").trim().charAt(0).toUpperCase() || "?";
+const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'>
+<defs>
+<linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'>
+<stop offset='0%' stop-color='%23172a45'/>
+<stop offset='100%' stop-color='%230e1c33'/>
+</linearGradient>
+</defs>
+<rect width='96' height='96' rx='12' fill='url(%23bg)'/>
+<text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%23dbe8ff' font-family='Inter,Arial,sans-serif' font-size='44' font-weight='700'>${initial}</text>
+</svg>`;
+
+return `data:image/svg+xml;utf8,${svg}`;
 }
 
 function setSkinImageWithFallback(img,username){
@@ -94,12 +112,18 @@ if(!img || !username) return;
 const sources=getSkinBustSources(username);
 let sourceIndex=0;
 
+img.classList.remove("skin-fallback");
+img.referrerPolicy="no-referrer";
 img.src=sources[sourceIndex];
+img.onload=()=>img.classList.remove("skin-fallback");
 
 img.onerror=()=>{
 sourceIndex+=1;
 if(sourceIndex>=sources.length){
 img.onerror=null;
+img.onload=null;
+img.classList.add("skin-fallback");
+img.src=createInitialFallbackDataUri(username);
 return;
 }
 
