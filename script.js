@@ -82,11 +82,22 @@ const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 function getSkinBustSources(username){
 const safeUsername=encodeURIComponent(username);
 return [
-`https://minotar.net/armor/body/${safeUsername}/100.png`,
-`https://minotar.net/body/${safeUsername}/100.png`,
 `https://render.crafty.gg/3d/bust/${safeUsername}`,
 `https://mc-heads.net/body/${safeUsername}/right`,
-`https://crafatar.com/renders/body/${safeUsername}?overlay`
+`https://crafatar.com/renders/body/${safeUsername}?overlay`,
+`https://minotar.net/armor/body/${safeUsername}/100.png`,
+`https://minotar.net/body/${safeUsername}/100.png`,
+`https://starlightskins.lunareclipse.studio/render/default/${safeUsername}/full?renderScale=3`
+];
+}
+
+function getSkinHeadSources(username){
+const safeUsername=encodeURIComponent(username);
+return [
+`https://mc-heads.net/avatar/${safeUsername}/64`,
+`https://crafatar.com/avatars/${safeUsername}?size=64&overlay`,
+`https://minotar.net/avatar/${safeUsername}/64`,
+`https://starlightskins.lunareclipse.studio/avatar/${safeUsername}`
 ];
 }
 
@@ -106,14 +117,15 @@ const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBo
 return `data:image/svg+xml;utf8,${svg}`;
 }
 
-function setSkinImageWithFallback(img,username){
+function setSkinImageWithFallback(img,username,{variant="bust"}={}){
 if(!img || !username) return;
 
-const sources=getSkinBustSources(username);
+const sources=variant==="head"
+? getSkinHeadSources(username)
+: getSkinBustSources(username);
 let sourceIndex=0;
 
 img.classList.remove("skin-fallback");
-img.referrerPolicy="no-referrer";
 img.src=sources[sourceIndex];
 img.onload=()=>img.classList.remove("skin-fallback");
 
@@ -344,7 +356,6 @@ row.innerHTML=`
 <div class="rank">${index+1}.</div>
 
 <div class="skin-wrap">
-<img class="skin skin-shadow" aria-hidden="true">
 <img class="skin" alt="${player.mc_username} skin">
 </div>
 </div>
@@ -371,7 +382,7 @@ row.onclick=()=>openPlayerModal(player);
 container.appendChild(row);
 
 const skinImages=row.querySelectorAll(".skin");
-skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username));
+skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username,{variant:"head"}));
 
 });
 

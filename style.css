@@ -697,11 +697,13 @@ z-index:1;
 width:68px;
 height:48px;
 border-radius:6px;
-object-fit:contain;
-object-position:center top;
-background:transparent;
+object-fit:cover;
+object-position:center;
+background:linear-gradient(180deg,#101f37,#0b182d);
+border:1px solid rgba(89,129,194,.45);
 mix-blend-mode:normal;
 image-rendering:pixelated;
+box-shadow:0 6px 12px rgba(2,10,22,.35);
 }
 
 .skin-fallback{
