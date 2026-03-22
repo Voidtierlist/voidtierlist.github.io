@@ -700,7 +700,16 @@ border-radius:6px;
 object-fit:contain;
 object-position:center top;
 background:transparent;
-mix-blend-mode:screen;
+mix-blend-mode:normal;
+image-rendering:pixelated;
+}
+
+.skin-fallback{
+mix-blend-mode:normal !important;
+object-fit:cover;
+object-position:center;
+background:linear-gradient(180deg,#101f37,#0b182d);
+border:1px solid rgba(89,129,194,.45);
 }
 
 .skin-shadow{
@@ -1004,7 +1013,8 @@ border-radius:7px;
 object-fit:cover;
 border:1px solid #385a88;
 transition:transform .2s ease;
-mix-blend-mode:screen;
+mix-blend-mode:normal;
+image-rendering:pixelated;
 }
 
 .tier-player-card:hover .tier-player-skin{transform:scale(1.08)}
