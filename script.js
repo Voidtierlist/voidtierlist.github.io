@@ -79,26 +79,11 @@ const COMBAT_RANK_THEMES = {
 
 const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 
-function getSkinHeadSources(username){
+function getCraftySkinSource(username,variant="head",retryToken=""){
 const safeUsername=encodeURIComponent(username);
-return [
-`https://render.crafty.gg/3d/head/${safeUsername}`,
-`https://mc-heads.net/avatar/${safeUsername}/96`,
-`https://crafatar.com/avatars/${safeUsername}?size=96&overlay`,
-`https://minotar.net/avatar/${safeUsername}/96`
-];
-}
-
-function getSkinBustSources(username){
-const safeUsername=encodeURIComponent(username);
-return [
-`https://render.crafty.gg/3d/bust/${safeUsername}`,
-`https://mc-heads.net/body/${safeUsername}/right`,
-`https://crafatar.com/renders/body/${safeUsername}?overlay`,
-`https://minotar.net/armor/body/${safeUsername}/100.png`,
-`https://minotar.net/body/${safeUsername}/100.png`,
-`https://starlightskins.lunareclipse.studio/render/default/${safeUsername}/full?renderScale=3`
-];
+const safeVariant=variant==="bust" ? "bust" : "head";
+const retrySuffix=retryToken ? `?retry=${encodeURIComponent(retryToken)}` : "";
+return `https://render.crafty.gg/3d/${safeVariant}/${safeUsername}${retrySuffix}`;
 }
 
 function createInitialFallbackDataUri(username){
@@ -117,30 +102,54 @@ const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBo
 return `data:image/svg+xml;utf8,${svg}`;
 }
 
-function setSkinImageWithFallback(img,username,{variant="bust"}={}){
-if(!img || !username) return;
+function setSkinImageWithFallback(img,username,{variant="head"}={}){
+if(!img) return;
 
-const sources=variant==="head"
-? getSkinHeadSources(username)
-: getSkinBustSources(username);
-let sourceIndex=0;
+if(!username){
+img.onerror=null;
+img.onload=null;
+img.classList.add("skin-fallback");
+img.src=createInitialFallbackDataUri("?");
+return;
+}
 
+const safeVariant=variant==="bust" ? "bust" : "head";
+const requestId=`${Date.now()}-${Math.random().toString(36).slice(2)}`;
+const maxAttempts=2;
+let attempts=0;
+
+img.dataset.skinRequestId=requestId;
 img.classList.remove("skin-fallback");
-img.src=sources[sourceIndex];
-img.onload=()=>img.classList.remove("skin-fallback");
+img.decoding="async";
+img.loading="lazy";
+
+const loadCrafty=()=>{
+if(img.dataset.skinRequestId!==requestId) return;
+const retryToken=attempts===0 ? "" : `${requestId}-${attempts}`;
+img.src=getCraftySkinSource(username,safeVariant,retryToken);
+};
+
+img.onload=()=>{
+if(img.dataset.skinRequestId!==requestId) return;
+img.classList.remove("skin-fallback");
+};
 
 img.onerror=()=>{
-sourceIndex+=1;
-if(sourceIndex>=sources.length){
+if(img.dataset.skinRequestId!==requestId) return;
+
+attempts+=1;
+if(attempts<maxAttempts){
+loadCrafty();
+return;
+}
+
 img.onerror=null;
 img.onload=null;
 img.classList.add("skin-fallback");
 img.src=createInitialFallbackDataUri(username);
-return;
-}
-
-img.src=sources[sourceIndex];
 };
+
+loadCrafty();
 }
 
 function normalizePath(path){
@@ -455,7 +464,7 @@ card.addEventListener("click",()=>openPlayerModal(player));
 tierColumn.appendChild(card);
 
 const tierPlayerSkin=card.querySelector(".tier-player-skin");
-setSkinImageWithFallback(tierPlayerSkin,player.mc_username);
+setSkinImageWithFallback(tierPlayerSkin,player.mc_username,{variant:"head"});
 });
 }
 
@@ -686,7 +695,7 @@ player.mc_username;
 document.getElementById("modal-region").textContent=
 player.region;
 
-setSkinImageWithFallback(document.getElementById("modal-skin"),player.mc_username);
+setSkinImageWithFallback(document.getElementById("modal-skin"),player.mc_username,{variant:"bust"});
 
 const pos=allPlayersData.findIndex(
 p=>p.mc_username===player.mc_username)+1;

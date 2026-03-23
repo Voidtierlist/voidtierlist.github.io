@@ -610,8 +610,9 @@ cursor:pointer;
 transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
 position:relative;
 isolation:isolate;
-overflow:visible;
+overflow:hidden;
 box-shadow:0 8px 20px rgba(1,9,23,.28), inset 0 0 0 1px rgba(66,112,177,.08);
+min-width:0;
 }
 
 .player:hover{
@@ -689,6 +690,12 @@ position:relative;
 width:68px;
 height:48px;
 flex-shrink:0;
+overflow:hidden;
+border-radius:6px;
+display:flex;
+align-items:center;
+justify-content:center;
+max-width:100%;
 }
 
 .skin{
@@ -697,18 +704,21 @@ z-index:1;
 width:68px;
 height:48px;
 border-radius:6px;
-object-fit:cover;
+max-width:100%;
+max-height:100%;
+object-fit:contain;
 object-position:center;
 background:linear-gradient(180deg,#101f37,#0b182d);
 border:1px solid rgba(89,129,194,.45);
 mix-blend-mode:normal;
 image-rendering:pixelated;
 box-shadow:0 6px 12px rgba(2,10,22,.35);
+display:block;
 }
 
 .skin-fallback{
 mix-blend-mode:normal !important;
-object-fit:cover;
+object-fit:contain;
 object-position:center;
 background:linear-gradient(180deg,#101f37,#0b182d);
 border:1px solid rgba(89,129,194,.45);
@@ -877,7 +887,8 @@ opacity:1;
 pointer-events:auto;
 }
 .close{position:absolute;right:14px;top:14px;width:46px;height:46px;border-radius:50%;background:#182a46;color:#9fb0cc;display:flex;align-items:center;justify-content:center;font-size:32px;line-height:1;cursor:pointer}
-.modal-avatar{width:98px;height:98px;border-radius:50%;border:2px solid #dbb542;background:#172946;object-fit:contain}
+.modal-avatar{border:2px solid #dbb542;background:#172946;display:block;max-width:100%;max-height:100%}
+.modal-skin{width:98px;height:auto;aspect-ratio:3/4;max-height:132px;border-radius:12px;object-fit:contain;object-position:top center;overflow:hidden}
 #modal-name{margin:4px 0 0;font-size:clamp(46px,5.2vw,54px);max-width:100%;font-weight:800;line-height:.96;overflow-wrap:anywhere}
 .modal-combat-rank{display:flex;align-items:center;gap:6px;padding:7px 16px;border-radius:999px;font-size:clamp(18px,3vw,31px);font-weight:700;line-height:1.05}
 .modal-combat-rank-icon{width:20px;height:20px;object-fit:contain;flex-shrink:0}
@@ -930,7 +941,7 @@ z-index:0;
 
 @media (max-width: 700px){
 .modal-card{max-width:420px}
-.modal-avatar{width:82px;height:82px}
+.modal-skin{width:82px;max-height:116px}
 .modal-position{grid-template-columns:auto 1fr auto;min-height:46px}
 .modal-position-rank{min-width:76px;padding:0 10px;font-size:clamp(20px,6vw,30px)}
 .modal-position-overall{padding:0 6px;font-size:clamp(14px,4.1vw,20px)}
@@ -1012,11 +1023,14 @@ to{opacity:1;transform:translateY(0)}
 width:30px;
 height:30px;
 border-radius:7px;
-object-fit:cover;
+object-fit:contain;
 border:1px solid #385a88;
 transition:transform .2s ease;
 mix-blend-mode:normal;
 image-rendering:pixelated;
+display:block;
+max-width:100%;
+max-height:100%;
 }
 
 .tier-player-card:hover .tier-player-skin{transform:scale(1.08)}
