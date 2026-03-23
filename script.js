@@ -86,6 +86,16 @@ const retrySuffix=retryToken ? `?retry=${encodeURIComponent(retryToken)}` : "";
 return `https://render.crafty.gg/3d/${safeVariant}/${safeUsername}${retrySuffix}`;
 }
 
+function getMcHeadsSkinSource(username,variant="head"){
+const safeUsername=encodeURIComponent(username);
+
+if(variant==="bust"){
+return `https://mc-heads.net/body/${safeUsername}/right`;
+}
+
+return `https://mc-heads.net/avatar/${safeUsername}/64`;
+}
+
 function createInitialFallbackDataUri(username){
 const initial=(username || "?").trim().charAt(0).toUpperCase() || "?";
 const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'>
@@ -115,7 +125,11 @@ return;
 
 const safeVariant=variant==="bust" ? "bust" : "head";
 const requestId=`${Date.now()}-${Math.random().toString(36).slice(2)}`;
-const maxAttempts=2;
+const sourceQueue=[
+{ type:"crafty", maxAttempts:2 },
+{ type:"mc-heads", maxAttempts:1 }
+];
+let sourceIndex=0;
 let attempts=0;
 
 img.dataset.skinRequestId=requestId;
@@ -123,10 +137,24 @@ img.classList.remove("skin-fallback");
 img.decoding="async";
 img.loading="lazy";
 
-const loadCrafty=()=>{
+const loadCurrentSource=()=>{
 if(img.dataset.skinRequestId!==requestId) return;
+const activeSource=sourceQueue[sourceIndex];
+if(!activeSource){
+img.onerror=null;
+img.onload=null;
+img.classList.add("skin-fallback");
+img.src=createInitialFallbackDataUri(username);
+return;
+}
+
+if(activeSource.type==="crafty"){
 const retryToken=attempts===0 ? "" : `${requestId}-${attempts}`;
 img.src=getCraftySkinSource(username,safeVariant,retryToken);
+return;
+}
+
+img.src=getMcHeadsSkinSource(username,safeVariant);
 };
 
 img.onload=()=>{
@@ -138,18 +166,18 @@ img.onerror=()=>{
 if(img.dataset.skinRequestId!==requestId) return;
 
 attempts+=1;
-if(attempts<maxAttempts){
-loadCrafty();
+const activeSource=sourceQueue[sourceIndex];
+if(activeSource && attempts<activeSource.maxAttempts){
+loadCurrentSource();
 return;
 }
 
-img.onerror=null;
-img.onload=null;
-img.classList.add("skin-fallback");
-img.src=createInitialFallbackDataUri(username);
+sourceIndex+=1;
+attempts=0;
+loadCurrentSource();
 };
 
-loadCrafty();
+loadCurrentSource();
 }
 
 function normalizePath(path){
