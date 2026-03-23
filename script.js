@@ -79,6 +79,16 @@ const COMBAT_RANK_THEMES = {
 
 const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 
+function getSkinHeadSources(username){
+const safeUsername=encodeURIComponent(username);
+return [
+`https://render.crafty.gg/3d/head/${safeUsername}`,
+`https://mc-heads.net/avatar/${safeUsername}/96`,
+`https://crafatar.com/avatars/${safeUsername}?size=96&overlay`,
+`https://minotar.net/avatar/${safeUsername}/96`
+];
+}
+
 function getSkinBustSources(username){
 const safeUsername=encodeURIComponent(username);
 return [
