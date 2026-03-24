@@ -1479,5 +1479,16 @@
         "region": "EU",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1155461569497538611": {
+        "mc_username": "kyloh",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
