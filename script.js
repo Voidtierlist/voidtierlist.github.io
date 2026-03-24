@@ -79,23 +79,14 @@ const COMBAT_RANK_THEMES = {
 
 const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 
-function getSkinSourceCandidates(username,variant="head",retryToken=""){
+function getSkinSourceCandidates(username,retryToken=""){
 const safeUsername=encodeURIComponent(username);
-const safeVariant=variant==="bust" ? "bust" : "head";
 const retrySuffix=retryToken ? `?retry=${encodeURIComponent(retryToken)}` : "";
 
-if(safeVariant==="bust"){
 return [
-`https://mc-heads.net/body/${safeUsername}/right${retrySuffix}`,
-`https://mc-heads.net/body/${safeUsername}/left`,
+`https://render.crafty.gg/3d/bust/${safeUsername}${retrySuffix}`,
+`https://mc-heads.net/body/${safeUsername}/right`,
 `https://crafatar.com/renders/body/${safeUsername}?overlay`
-];
-}
-
-return [
-`https://mc-heads.net/avatar/${safeUsername}/64${retrySuffix}`,
-`https://mc-heads.net/avatar/${safeUsername}/48`,
-`https://crafatar.com/avatars/${safeUsername}?size=64&overlay`
 ];
 }
 
@@ -137,7 +128,7 @@ img.loading="lazy";
 const loadNextSource=()=>{
 if(img.dataset.skinRequestId!==requestId) return;
 const retryToken=sourceIndex===0 ? "" : `${requestId}-${sourceIndex}`;
-const sourceCandidates=getSkinSourceCandidates(username,variant,retryToken);
+const sourceCandidates=getSkinSourceCandidates(username,retryToken);
 const source=sourceCandidates[sourceIndex];
 
 if(!source){
@@ -405,7 +396,7 @@ row.onclick=()=>openPlayerModal(player);
 container.appendChild(row);
 
 const skinImages=row.querySelectorAll(".skin");
-skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username,{variant:"head"}));
+skinImages.forEach(img=>setSkinImageWithFallback(img,player.mc_username,{variant:"bust"}));
 
 });
 
@@ -478,7 +469,7 @@ card.addEventListener("click",()=>openPlayerModal(player));
 tierColumn.appendChild(card);
 
 const tierPlayerSkin=card.querySelector(".tier-player-skin");
-setSkinImageWithFallback(tierPlayerSkin,player.mc_username,{variant:"head"});
+setSkinImageWithFallback(tierPlayerSkin,player.mc_username,{variant:"bust"});
 });
 }
 
