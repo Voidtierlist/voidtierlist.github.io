@@ -1483,7 +1483,7 @@
     "1155461569497538611": {
         "mc_username": "kyloh",
         "region": "AS",
-        "total_points": 7,
+        "total_points": 8,
         "gamemodes": {
             "axe": {
                 "tier": "LT4",
@@ -1494,6 +1494,10 @@
                 "points": 3
             },
             "uhc": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "mace": {
                 "tier": "LT5",
                 "points": 1
             }
