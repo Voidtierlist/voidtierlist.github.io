@@ -1363,8 +1363,8 @@
         "gamemodes": {}
     },
     "1482044843122364649": {
-        "mc_username": "itzM00n_",
-        "region": "EU",
+        "mc_username": "ItzM00n_",
+        "region": "AS",
         "total_points": 4,
         "gamemodes": {
             "axe": {
@@ -1485,11 +1485,11 @@
         "region": "AS",
         "total_points": 7,
         "gamemodes": {
-            "sword": {
+            "axe": {
                 "tier": "LT4",
                 "points": 3
             },
-            "axe": {
+            "sword": {
                 "tier": "LT4",
                 "points": 3
             },
@@ -1498,5 +1498,40 @@
                 "points": 1
             }
         }
+    },
+    "1241406385195847837": {
+        "mc_username": "Ritofied",
+        "region": "AS",
+        "total_points": 24,
+        "gamemodes": {
+            "axe": {
+                "tier": "HT3",
+                "points": 10
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "uhc": {
+                "tier": "HT4",
+                "points": 4
+            }
+        }
+    },
+    "1481932505845071896": {
+        "mc_username": "DarkVionix",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1323674843895566440": {
+        "mc_username": "Spunky_Prime",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
