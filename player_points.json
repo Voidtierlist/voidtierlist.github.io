@@ -1547,5 +1547,32 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1349351806492348508": {
+        "mc_username": "MeowwByAladin",
+        "region": "AS",
+        "total_points": 72,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "LT2",
+                "points": 20
+            },
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "LT2",
+                "points": 20
+            },
+            "diamond pot": {
+                "tier": "LT2",
+                "points": 20
+            },
+            "smp": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
