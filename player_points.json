@@ -1483,9 +1483,13 @@
     "1155461569497538611": {
         "mc_username": "kyloh",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 6,
         "gamemodes": {
             "sword": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "axe": {
                 "tier": "LT4",
                 "points": 3
             }
