@@ -68,6 +68,35 @@ function attachGoldParticles(source){
     }
 }
 
+function setProfileSkinWithFallback(img,username){
+    if(!img || !username) return;
+
+    const safeUsername=encodeURIComponent(username);
+    const sources=[
+        `https://render.crafty.gg/3d/bust/${safeUsername}`,
+        `https://mc-heads.net/body/${safeUsername}/right`,
+        `https://crafatar.com/renders/body/${safeUsername}?overlay`
+    ];
+
+    let sourceIndex=0;
+    const loadNextSource=()=>{
+        const source=sources[sourceIndex];
+        if(!source){
+            img.onerror=null;
+            return;
+        }
+
+        img.src=source;
+    };
+
+    img.onerror=()=>{
+        sourceIndex+=1;
+        loadNextSource();
+    };
+
+    loadNextSource();
+}
+
 const params = new URLSearchParams(window.location.search);
 const name = params.get("user");
 
@@ -108,8 +137,7 @@ fetch("player_points.json")
         attachGoldParticles(profileCombatRankLogo);
     }
 
-    document.getElementById("skin").src =
-        `https://render.crafty.gg/3d/bust/${player.mc_username}`;
+    setProfileSkinWithFallback(document.getElementById("skin"),player.mc_username);
 
     const gmDiv=document.getElementById("gamemodes");
     gmDiv.innerHTML="";

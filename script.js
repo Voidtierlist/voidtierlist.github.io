@@ -79,11 +79,24 @@ const COMBAT_RANK_THEMES = {
 
 const VALID_MODES = new Set(["overall",...ALL_GAMEMODES]);
 
-function getCraftySkinSource(username,variant="head",retryToken=""){
+function getSkinSourceCandidates(username,variant="head",retryToken=""){
 const safeUsername=encodeURIComponent(username);
 const safeVariant=variant==="bust" ? "bust" : "head";
 const retrySuffix=retryToken ? `?retry=${encodeURIComponent(retryToken)}` : "";
-return `https://render.crafty.gg/3d/${safeVariant}/${safeUsername}${retrySuffix}`;
+
+if(safeVariant==="bust"){
+return [
+`https://render.crafty.gg/3d/bust/${safeUsername}${retrySuffix}`,
+`https://mc-heads.net/body/${safeUsername}/right`,
+`https://crafatar.com/renders/body/${safeUsername}?overlay`
+];
+}
+
+return [
+`https://render.crafty.gg/3d/head/${safeUsername}${retrySuffix}`,
+`https://mc-heads.net/avatar/${safeUsername}/64`,
+`https://crafatar.com/avatars/${safeUsername}?size=64&overlay`
+];
 }
 
 function createInitialFallbackDataUri(username){
@@ -113,20 +126,29 @@ img.src=createInitialFallbackDataUri("?");
 return;
 }
 
-const safeVariant=variant==="bust" ? "bust" : "head";
 const requestId=`${Date.now()}-${Math.random().toString(36).slice(2)}`;
-const maxAttempts=2;
-let attempts=0;
+let sourceIndex=0;
 
 img.dataset.skinRequestId=requestId;
 img.classList.remove("skin-fallback");
 img.decoding="async";
 img.loading="lazy";
 
-const loadCrafty=()=>{
+const loadNextSource=()=>{
 if(img.dataset.skinRequestId!==requestId) return;
-const retryToken=attempts===0 ? "" : `${requestId}-${attempts}`;
-img.src=getCraftySkinSource(username,safeVariant,retryToken);
+const retryToken=sourceIndex===0 ? "" : `${requestId}-${sourceIndex}`;
+const sourceCandidates=getSkinSourceCandidates(username,variant,retryToken);
+const source=sourceCandidates[sourceIndex];
+
+if(!source){
+img.onerror=null;
+img.onload=null;
+img.classList.add("skin-fallback");
+img.src=createInitialFallbackDataUri(username);
+return;
+}
+
+img.src=source;
 };
 
 img.onload=()=>{
@@ -137,19 +159,11 @@ img.classList.remove("skin-fallback");
 img.onerror=()=>{
 if(img.dataset.skinRequestId!==requestId) return;
 
-attempts+=1;
-if(attempts<maxAttempts){
-loadCrafty();
-return;
-}
-
-img.onerror=null;
-img.onload=null;
-img.classList.add("skin-fallback");
-img.src=createInitialFallbackDataUri(username);
+sourceIndex+=1;
+loadNextSource();
 };
 
-loadCrafty();
+loadNextSource();
 }
 
 function normalizePath(path){
