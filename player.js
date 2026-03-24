@@ -73,8 +73,8 @@ function setProfileSkinWithFallback(img,username){
 
     const safeUsername=encodeURIComponent(username);
     const sources=[
+        `https://render.crafty.gg/3d/bust/${safeUsername}`,
         `https://mc-heads.net/body/${safeUsername}/right`,
-        `https://mc-heads.net/body/${safeUsername}/left`,
         `https://crafatar.com/renders/body/${safeUsername}?overlay`
     ];
 

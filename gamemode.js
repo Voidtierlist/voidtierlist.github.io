@@ -27,7 +27,7 @@ fetch("player_points.json")
         <div class="rank">${index + 1}.</div>
 
         <img class="skin"
-        src="https://mc-heads.net/body/${player.mc_username}/100">
+        src="https://render.crafty.gg/3d/bust/${player.mc_username}">
 
         <div class="info">
         <a href="player.html?user=${player.mc_username}">

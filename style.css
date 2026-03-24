@@ -649,7 +649,7 @@ border-radius:8px;
 clip-path:polygon(0 0,84% 0,100% 50%,84% 100%,0 100%);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
 position:relative;
-overflow:hidden;
+overflow:visible;
 }
 
 .player.top-1 .rank-bar{background:linear-gradient(135deg,#f2c44f,#c58a23)}
@@ -666,6 +666,7 @@ background:linear-gradient(110deg,rgba(255,255,255,0) 28%,rgba(255,255,255,.42) 
 transform:translateX(-210%);
 animation:rank-shine-sweep 2.8s ease-out infinite;
 pointer-events:none;
+z-index:0;
 }
 .player.top-2 .rank-bar::after{animation-delay:.22s}
 .player.top-3 .rank-bar::after{animation-delay:.42s}
@@ -696,6 +697,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 max-width:100%;
+z-index:3;
+transform:translateX(3px);
 }
 
 .skin{
