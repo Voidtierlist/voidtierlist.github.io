@@ -1031,15 +1031,15 @@
         }
     },
     "1152853861174882395": {
-        "mc_username": "Anc1en7",
+        "mc_username": "Swiftyy_",
         "region": "AS",
         "total_points": 6,
         "gamemodes": {
-            "smp": {
+            "nethpot": {
                 "tier": "LT4",
                 "points": 3
             },
-            "nethpot": {
+            "smp": {
                 "tier": "LT4",
                 "points": 3
             }
@@ -1618,6 +1618,12 @@
     "1205205317865181235": {
         "mc_username": "Makued",
         "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "896612262222114907": {
+        "mc_username": "ssytLOL",
+        "region": "AS",
         "total_points": 0,
         "gamemodes": {}
     }
