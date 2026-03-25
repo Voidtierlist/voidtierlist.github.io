@@ -688,8 +688,12 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 21,
+        "total_points": 31,
         "gamemodes": {
+            "nethpot": {
+                "tier": "HT3",
+                "points": 10
+            },
             "crystal": {
                 "tier": "LT4",
                 "points": 3
@@ -1593,6 +1597,12 @@
     },
     "879487648547344404": {
         "mc_username": "torchwolf",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1205205317865181235": {
+        "mc_username": "Makued",
         "region": "EU",
         "total_points": 0,
         "gamemodes": {}
