@@ -769,8 +769,12 @@
     "1291679137668268034": {
         "mc_username": "Crexen_",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
+            "sword": {
+                "tier": "LT5",
+                "points": 1
+            },
             "crystal": {
                 "tier": "LT4",
                 "points": 3
@@ -1031,7 +1035,7 @@
         }
     },
     "1152853861174882395": {
-        "mc_username": "Swiftyy_",
+        "mc_username": "Anc1en7",
         "region": "AS",
         "total_points": 6,
         "gamemodes": {
@@ -1628,6 +1632,12 @@
     },
     "896612262222114907": {
         "mc_username": "ssytLOL",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1332925730316619787": {
+        "mc_username": "Gilzzgabut",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
