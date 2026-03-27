@@ -1567,11 +1567,11 @@
     "1485895435121070172": {
         "mc_username": "Dyn0_",
         "region": "AS",
-        "total_points": 4,
+        "total_points": 6,
         "gamemodes": {
             "nethpot": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
