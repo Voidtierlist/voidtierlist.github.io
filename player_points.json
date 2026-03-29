@@ -201,7 +201,7 @@
         "gamemodes": {}
     },
     "1464676501759852617": {
-        "mc_username": "SxploreMTS",
+        "mc_username": "tx2lore_",
         "region": "AS",
         "total_points": 12,
         "gamemodes": {
@@ -692,7 +692,7 @@
     "1246396951814082648": {
         "mc_username": "VulkanDaGreat",
         "region": "AS",
-        "total_points": 31,
+        "total_points": 35,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT3",
@@ -711,8 +711,8 @@
                 "points": 4
             },
             "diamond pot": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT3",
+                "points": 10
             },
             "smp": {
                 "tier": "HT4",
@@ -1652,6 +1652,42 @@
     "1332925730316619787": {
         "mc_username": "Gilzzgabut",
         "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1305295624937279550": {
+        "mc_username": "CarterG6",
+        "region": "NA",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1009049589518696481": {
+        "mc_username": "Kraazy123",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1473166445599789098": {
+        "mc_username": "newgenpacker39",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1098809670581358612": {
+        "mc_username": "SKYROWWW",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1289263303243202602": {
+        "mc_username": "void_craft12",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1061051254970785842": {
+        "mc_username": "RocketGod64",
+        "region": "NA",
         "total_points": 0,
         "gamemodes": {}
     }
