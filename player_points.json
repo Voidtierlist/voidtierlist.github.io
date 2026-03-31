@@ -1547,7 +1547,7 @@
     "1241406385195847837": {
         "mc_username": "Ritofied",
         "region": "AS",
-        "total_points": 24,
+        "total_points": 20,
         "gamemodes": {
             "axe": {
                 "tier": "HT3",
@@ -1558,8 +1558,8 @@
                 "points": 6
             },
             "mace": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "N/A",
+                "points": 0
             },
             "uhc": {
                 "tier": "HT4",
