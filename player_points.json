@@ -786,11 +786,11 @@
     "1291679137668268034": {
         "mc_username": "Crexen_",
         "region": "AS",
-        "total_points": 7,
+        "total_points": 12,
         "gamemodes": {
             "sword": {
-                "tier": "LT5",
-                "points": 1
+                "tier": "LT3",
+                "points": 6
             },
             "mace": {
                 "tier": "LT5",
