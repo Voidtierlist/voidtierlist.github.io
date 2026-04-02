@@ -1779,11 +1779,15 @@
     "1020747745696428072": {
         "mc_username": "BaconXD32",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 7,
         "gamemodes": {
             "axe": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "sword": {
+                "tier": "HT4",
+                "points": 4
             }
         }
     }
