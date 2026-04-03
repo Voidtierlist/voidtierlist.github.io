@@ -698,7 +698,7 @@ position:relative;
 z-index:4;
 grid-column:2;
 grid-row:1;
-margin-left:-64px;
+margin-left:-68px;
 padding-right:6px;
 }
 
@@ -714,6 +714,20 @@ justify-content:center;
 max-width:100%;
 z-index:3;
 transform:translate(-2px,1px);
+}
+
+.skin-wrap::after{
+content:"";
+position:absolute;
+left:50%;
+bottom:2px;
+width:54px;
+height:16px;
+transform:translateX(-50%);
+border-radius:50%;
+background:radial-gradient(ellipse at center,rgba(4,10,20,.58) 0%,rgba(4,10,20,.3) 52%,rgba(4,10,20,0) 100%);
+pointer-events:none;
+z-index:0;
 }
 
 .skin{
