@@ -1308,7 +1308,7 @@
     "1478722448370438215": {
         "mc_username": "AscalonXPrime",
         "region": "AS",
-        "total_points": 40,
+        "total_points": 39,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
@@ -1323,8 +1323,8 @@
                 "points": 6
             },
             "crystal": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "LT4",
+                "points": 3
             },
             "diamond smp": {
                 "tier": "LT3",
@@ -1786,6 +1786,10 @@
         "region": "AS",
         "total_points": 16,
         "gamemodes": {
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
+            },
             "axe": {
                 "tier": "LT4",
                 "points": 3
@@ -1797,11 +1801,19 @@
             "mace": {
                 "tier": "LT3",
                 "points": 6
-            },
-            "nethpot": {
-                "tier": "LT4",
-                "points": 3
             }
         }
+    },
+    "1356295478739730632": {
+        "mc_username": "Ruppy_GotPills",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1027260317543174165": {
+        "mc_username": "Icey_gamerXD",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
