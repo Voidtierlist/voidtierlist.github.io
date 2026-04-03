@@ -554,6 +554,30 @@ document.addEventListener("keydown",(event)=>{
 });
 }
 
+function setupInfoPanel(){
+const infoToggle=document.getElementById("infoToggle");
+const infoPanel=document.getElementById("infoPanel");
+
+if(!infoToggle || !infoPanel) return;
+
+infoToggle.addEventListener("click",(event)=>{
+const willOpen=!infoPanel.classList.contains("is-open");
+infoPanel.classList.toggle("is-open",willOpen);
+infoToggle.setAttribute("aria-expanded",String(willOpen));
+event.stopPropagation();
+});
+
+infoPanel.addEventListener("click",(event)=>{
+event.stopPropagation();
+});
+
+document.addEventListener("click",()=>{
+if(!infoPanel.classList.contains("is-open")) return;
+infoPanel.classList.remove("is-open");
+infoToggle.setAttribute("aria-expanded","false");
+});
+}
+
 function showPageLoader(){
 const loader=document.getElementById("pageLoader");
 if(!loader) return;
@@ -648,6 +672,7 @@ currentMode=getModeFromPath();
 setActiveModeButton(currentMode);
 syncModeInUrl(currentMode,{replace:true});
 
+setupInfoPanel();
 setupMobileMenu();
 showPageLoader();
 loadPlayers();

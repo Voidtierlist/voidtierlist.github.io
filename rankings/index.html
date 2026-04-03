@@ -158,10 +158,46 @@
         <div class="col-tiers">TIERS</div>
         <div class="leaderboard-info-wrap">
             <div class="leaderboard-top-actions">
-                <a class="leaderboard-discord-link" href="https://dc.gg/voidtierlist" target="_blank" rel="noopener noreferrer" aria-label="Join Discord">
-                    <img src="https://mctiers.com/nav_icons/discord.svg" alt="" aria-hidden="true">
-                    <span>Discord</span>
-                </a>
+                <button id="infoToggle" class="leaderboard-info" type="button" aria-expanded="false" aria-controls="infoPanel">
+                    Information
+                </button>
+            </div>
+
+            <div id="infoPanel" class="info-panel" role="dialog" aria-label="Achievement titles information">
+                <div class="info-panel-tabs">
+                    <button class="info-panel-tab active" type="button">Titles</button>
+                </div>
+
+                <ul class="info-panel-list">
+                    <li>
+                        <span class="info-title-title rank-grandmaster">Combat Grandmaster</span>
+                        <span class="info-title-points">Obtained 400+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-master">Combat Master</span>
+                        <span class="info-title-points">Obtained 250+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-ace">Combat Ace</span>
+                        <span class="info-title-points">Obtained 100+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-specialist">Combat Specialist</span>
+                        <span class="info-title-points">Obtained 50+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-cadet">Combat Cadet</span>
+                        <span class="info-title-points">Obtained 20+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-novice">Combat Novice</span>
+                        <span class="info-title-points">Obtained 10+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-rookie">Rookie</span>
+                        <span class="info-title-points">Starting rank for players with less than 10 points.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
