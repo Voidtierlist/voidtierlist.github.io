@@ -1784,7 +1784,7 @@
     "1020747745696428072": {
         "mc_username": "BaconXD32",
         "region": "AS",
-        "total_points": 13,
+        "total_points": 16,
         "gamemodes": {
             "axe": {
                 "tier": "LT4",
@@ -1797,6 +1797,10 @@
             "mace": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "nethpot": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     }
