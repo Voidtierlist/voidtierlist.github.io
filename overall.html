@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overall Section</title>
+
+<link rel="stylesheet" href="/overall.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="pageLoader" class="page-loader" aria-live="polite">
+    <div class="loader-spinner" aria-hidden="true"></div>
+    <p>Loading Rankings</p>
+</div>
+
+<div class="page">
+
+<div class="topbar">
+
+    <div class="logo">
+        <img src="https://ik.imagekit.io/tb4zlfjcb/ac792902-a6a8-49ff-b115-cb0c5684ff76_removalai_preview.png" alt="Void Tierlist logo">
+    </div>
+
+    <div class="nav-links">
+        <a href="/" class="nav-link">
+            <img src="https://mctiers.com/nav_icons/home-muted.svg" alt="Home icon" aria-hidden="true">
+            <span>Home</span>
+        </a>
+        <a href="/rankings" class="nav-link active">
+            <img src="https://mctiers.com/nav_icons/rankings.svg" alt="Rankings icon" aria-hidden="true">
+            <span>Rankings</span>
+        </a>
+        <a href="https://dc.gg/voidtierlist" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <img src="https://mctiers.com/nav_icons/discord.svg" alt="Discord icon" aria-hidden="true">
+            <span>Discord</span>
+        </a>
+        <a href="/testers" class="nav-link">
+            <img src="https://ik.imagekit.io/e8lpkrj4i/icons8-bar-chart-100.png" alt="Testers icon" aria-hidden="true">
+            <span>Testers</span>
+        </a>
+    </div>
+
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation menu">
+        <span class="menu-bar" aria-hidden="true"></span>
+        <span class="menu-bar" aria-hidden="true"></span>
+        <span class="menu-bar" aria-hidden="true"></span>
+    </button>
+
+    <div class="nav-right">
+        <div class="search-wrapper">
+            <img src="https://ik.imagekit.io/e8lpkrj4i/search-13-512.png" alt="Search" aria-hidden="true" class="search-icon">
+            <input type="text" id="searchInput" placeholder="Search player...">
+            <span class="search-shortcut">/</span>
+        </div>
+    </div>
+
+</div>
+
+<div id="mobileNavBackdrop" class="mobile-nav-backdrop" hidden></div>
+<nav id="mobileNav" class="mobile-nav-drawer" aria-hidden="true">
+    <button id="mobileNavClose" class="mobile-nav-close" type="button" aria-label="Close navigation menu">✕</button>
+    <a href="/" class="mobile-nav-link">
+        <img src="https://mctiers.com/nav_icons/home-muted.svg" alt="" aria-hidden="true">
+        <span>Home</span>
+    </a>
+    <a href="/rankings" class="mobile-nav-link active">
+        <img src="https://mctiers.com/nav_icons/rankings.svg" alt="" aria-hidden="true">
+        <span>Rankings</span>
+    </a>
+    <a href="https://dc.gg/voidtierlist" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">
+        <img src="https://mctiers.com/nav_icons/discord.svg" alt="" aria-hidden="true">
+        <span>Discord</span>
+    </a>
+    <a href="/testers" class="mobile-nav-link">
+        <img src="https://ik.imagekit.io/e8lpkrj4i/icons8-bar-chart-100.png" alt="" aria-hidden="true">
+        <span>Testers</span>
+    </a>
+</nav>
+
+<div id="searchResults" class="search-results"></div>
+
+<div class="gamemode-bar">
+
+<div class="mode active" data-mode="overall">
+<img src="https://mctiers.com/tier_icons/overall.svg">
+<span>Overall</span>
+</div>
+
+<div class="mode" data-mode="smp">
+<img src="https://mctiers.com/tier_icons/smp.svg">
+<span>SMP</span>
+</div>
+
+<div class="mode" data-mode="sword">
+<img src="https://mctiers.com/tier_icons/sword.svg">
+<span>Sword</span>
+</div>
+
+<div class="mode" data-mode="crystal">
+<img src="https://mctiers.com/tier_icons/vanilla.svg">
+<span>Crystal</span>
+</div>
+
+<div class="mode" data-mode="nethpot">
+<img src="https://mctiers.com/tier_icons/nethop.svg">
+<span>Nethpot</span>
+</div>
+
+<div class="mode" data-mode="diamondpot">
+<img src="https://mctiers.com/tier_icons/pot.svg">
+<span>Diamond Pot</span>
+</div>
+
+<div class="mode" data-mode="uhc">
+<img src="https://mctiers.com/tier_icons/uhc.svg">
+<span>UHC</span>
+</div>
+
+<div class="mode" data-mode="axe">
+<img src="https://mctiers.com/tier_icons/axe.svg">
+<span>Axe</span>
+</div>
+
+<div class="mode" data-mode="diamondsmp">
+<img src="https://subtiers.net/assets/dia_smp-523efa38.svg">
+<span>Diamond SMP</span>
+</div>
+
+<div class="mode" data-mode="mace">
+<img src="https://mctiers.com/tier_icons/mace.svg">
+<span>Mace</span>
+</div>
+
+</div>
+
+<div class="divider-line"></div>
+
+<div class="content-box">
+    <div class="leaderboard-header">
+        <div class="col-rank">#</div>
+        <div class="col-player">PLAYER</div>
+        <div class="col-region">REGION</div>
+        <div class="col-tiers">TIERS</div>
+        <div class="leaderboard-info-wrap">
+            <div class="leaderboard-top-actions">
+                <button id="infoToggle" class="leaderboard-info" type="button" aria-expanded="false" aria-controls="infoPanel">
+                    Information
+                </button>
+                <a href="https://dc.gg/voidtierlist" target="_blank" rel="noopener noreferrer" class="discord-pill" aria-label="Join Discord">💬</a>
+            </div>
+
+            <div id="infoPanel" class="info-panel" role="dialog" aria-label="Achievement titles information">
+                <div class="info-panel-tabs">
+                    <button class="info-panel-tab active" type="button">Titles</button>
+                </div>
+
+                <ul class="info-panel-list">
+                    <li>
+                        <span class="info-title-title rank-grandmaster">Combat Grandmaster</span>
+                        <span class="info-title-points">Obtained 400+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-master">Combat Master</span>
+                        <span class="info-title-points">Obtained 250+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-ace">Combat Ace</span>
+                        <span class="info-title-points">Obtained 100+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-specialist">Combat Specialist</span>
+                        <span class="info-title-points">Obtained 50+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-cadet">Combat Cadet</span>
+                        <span class="info-title-points">Obtained 20+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-novice">Combat Novice</span>
+                        <span class="info-title-points">Obtained 10+ total points.</span>
+                    </li>
+                    <li>
+                        <span class="info-title-title rank-rookie">Rookie</span>
+                        <span class="info-title-points">Starting rank for players with less than 10 points.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="leaderboard"></div>
+</div>
+
+</div>
+
+<script src="/overall.js"></script>
+
+</body>
+</html>
