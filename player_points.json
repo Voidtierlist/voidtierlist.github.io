@@ -1813,15 +1813,15 @@
     "1027260317543174165": {
         "mc_username": "Icey_gamerXD",
         "region": "AS",
-        "total_points": 7,
+        "total_points": 8,
         "gamemodes": {
             "axe": {
                 "tier": "HT4",
                 "points": 4
             },
             "sword": {
-                "tier": "LT4",
-                "points": 3
+                "tier": "HT4",
+                "points": 4
             }
         }
     },
