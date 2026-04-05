@@ -981,7 +981,7 @@
         "gamemodes": {}
     },
     "1379503229402087524": {
-        "mc_username": "VortexOfDooM",
+        "mc_username": "Swightitzrealme",
         "region": "AS",
         "total_points": 15,
         "gamemodes": {
@@ -1835,5 +1835,23 @@
                 "points": 6
             }
         }
+    },
+    "1389170458041253899": {
+        "mc_username": "__Prabh",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1476168464698970223": {
+        "mc_username": "Manshif_Cibo",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "338658532901650432": {
+        "mc_username": "revyro",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
