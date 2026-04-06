@@ -1828,9 +1828,13 @@
     "1355383136388907230": {
         "mc_username": "KryzionXD",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 12,
         "gamemodes": {
             "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             }
