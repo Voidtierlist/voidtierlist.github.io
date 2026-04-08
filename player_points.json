@@ -441,15 +441,15 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 13,
+        "total_points": 15,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
                 "points": 4
             },
             "sword": {
-                "tier": "HT4",
-                "points": 4
+                "tier": "LT3",
+                "points": 6
             },
             "crystal": {
                 "tier": "LT4",
