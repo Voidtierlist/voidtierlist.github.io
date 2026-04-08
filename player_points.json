@@ -441,7 +441,7 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 15,
+        "total_points": 18,
         "gamemodes": {
             "nethpot": {
                 "tier": "HT4",
@@ -458,6 +458,10 @@
             "uhc": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "axe": {
+                "tier": "LT4",
+                "points": 3
             }
         }
     },
