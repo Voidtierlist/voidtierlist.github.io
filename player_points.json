@@ -447,6 +447,10 @@
                 "tier": "HT4",
                 "points": 4
             },
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            },
             "sword": {
                 "tier": "LT3",
                 "points": 6
@@ -458,10 +462,6 @@
             "uhc": {
                 "tier": "HT5",
                 "points": 2
-            },
-            "axe": {
-                "tier": "LT4",
-                "points": 3
             }
         }
     },
@@ -1154,15 +1154,15 @@
         "region": "EU",
         "total_points": 18,
         "gamemodes": {
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
             "axe": {
                 "tier": "LT3",
                 "points": 6
             },
             "sword": {
-                "tier": "LT3",
-                "points": 6
-            },
-            "nethpot": {
                 "tier": "LT3",
                 "points": 6
             }
@@ -1784,7 +1784,7 @@
         "gamemodes": {}
     },
     "1304073093303504918": {
-        "mc_username": "Itzreallynotme",
+        "mc_username": "Mr_spiderman",
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
@@ -1836,15 +1836,15 @@
     "1355383136388907230": {
         "mc_username": "KryzionXD",
         "region": "AS",
-        "total_points": 18,
+        "total_points": 15,
         "gamemodes": {
             "nethpot": {
                 "tier": "LT3",
                 "points": 6
             },
             "axe": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "LT4",
+                "points": 3
             },
             "sword": {
                 "tier": "LT3",
@@ -1860,7 +1860,7 @@
     },
     "1476168464698970223": {
         "mc_username": "Manshif_Cibo",
-        "region": "AS",
+        "region": "EU",
         "total_points": 1,
         "gamemodes": {
             "sword": {
@@ -1943,5 +1943,29 @@
                 "points": 2
             }
         }
+    },
+    "1440017851892371547": {
+        "mc_username": "OG1kem",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1402661899941842988": {
+        "mc_username": "ITZ_DARK_SENPAI",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1369295831873884280": {
+        "mc_username": "ErrorXkiller",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1338189692218376405": {
+        "mc_username": "jatinjorwal",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
