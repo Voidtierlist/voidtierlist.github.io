@@ -1982,5 +1982,16 @@
                 "points": 3
             }
         }
+    },
+    "874908737444388924": {
+        "mc_username": "ItzCypherrr",
+        "region": "AS",
+        "total_points": 2,
+        "gamemodes": {
+            "nethpot": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
