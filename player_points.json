@@ -2,8 +2,21 @@
     "1356295478739730632": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 18,
+        "gamemodes": {
+            "smp": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     },
     "1372098282863726646": {
         "mc_username": "xMewgical",
