@@ -137,7 +137,11 @@ fetch("player_points.json")
         attachGoldParticles(profileCombatRankLogo);
     }
 
-    setProfileSkinWithFallback(document.getElementById("skin"),player.mc_username);
+    const profileSkin=document.getElementById("skin");
+    const profileSkinShadow=document.getElementById("skin-shadow");
+
+    setProfileSkinWithFallback(profileSkin,player.mc_username);
+    setProfileSkinWithFallback(profileSkinShadow,player.mc_username);
 
     const gmDiv=document.getElementById("gamemodes");
     gmDiv.innerHTML="";
