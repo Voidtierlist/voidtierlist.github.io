@@ -19,11 +19,15 @@ display:none;
 }
 
 .skin{
-filter:none;
+filter:drop-shadow(-5px 6px 1px rgba(0,0,0,.62));
 }
 
 @media (max-width: 760px){
 .rank-bar{
 filter:drop-shadow(3px 4px 1px rgba(0,0,0,.48));
+}
+
+.skin{
+filter:drop-shadow(-4px 5px 1px rgba(0,0,0,.62));
 }
 }
