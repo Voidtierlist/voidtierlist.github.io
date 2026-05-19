@@ -19,7 +19,7 @@ display:none;
 }
 
 .skin{
-filter:drop-shadow(-5px 6px 1px rgba(0,0,0,.62));
+filter:drop-shadow(-7px 2px 0 rgba(0,0,0,.58));
 }
 
 @media (max-width: 760px){
@@ -28,6 +28,6 @@ filter:drop-shadow(3px 4px 1px rgba(0,0,0,.48));
 }
 
 .skin{
-filter:drop-shadow(-4px 5px 1px rgba(0,0,0,.62));
+filter:drop-shadow(-5px 1px 0 rgba(0,0,0,.58));
 }
 }
