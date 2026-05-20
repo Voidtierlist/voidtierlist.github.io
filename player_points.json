@@ -29,9 +29,13 @@
     "1356295478739730632": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 6,
+        "total_points": 12,
         "gamemodes": {
             "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
                 "tier": "LT3",
                 "points": 6
             }
