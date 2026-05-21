@@ -40,5 +40,16 @@
                 "points": 6
             }
         }
+    },
+    "1250746642676584523": {
+        "mc_username": "VoidCanSolo",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
