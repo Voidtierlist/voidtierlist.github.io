@@ -2,7 +2,7 @@
     "1372098282863726646": {
         "mc_username": "xMewgical",
         "region": "AS",
-        "total_points": 19,
+        "total_points": 18,
         "gamemodes": {
             "uhc": {
                 "tier": "HT5",
@@ -23,10 +23,6 @@
             "nethpot": {
                 "tier": "HT4",
                 "points": 4
-            },
-            "mace": {
-                "tier": "LT5",
-                "points": 1
             }
         }
     },
@@ -91,20 +87,26 @@
     "1471048137584939212": {
         "mc_username": "UNFAZED_DEVEL",
         "region": "AS",
-        "total_points": 18,
+        "total_points": 22,
         "gamemodes": {
             "crystal": {
                 "tier": "LT3",
                 "points": 6
             },
             "mace": {
-                "tier": "LT3",
-                "points": 6
+                "tier": "HT3",
+                "points": 10
             },
             "sword": {
                 "tier": "LT3",
                 "points": 6
             }
         }
+    },
+    "1397143582720135178": {
+        "mc_username": "Riwrd",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
