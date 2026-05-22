@@ -29,12 +29,8 @@
     "1356295478739730632": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 12,
+        "total_points": 6,
         "gamemodes": {
-            "nethpot": {
-                "tier": "LT3",
-                "points": 6
-            },
             "sword": {
                 "tier": "LT3",
                 "points": 6
@@ -44,19 +40,63 @@
     "1250746642676584523": {
         "mc_username": "VoidCanSolo",
         "region": "AS",
-        "total_points": 6,
-        "gamemodes": {
-            "crystal": {
-                "tier": "LT3",
-                "points": 6
-            }
-        }
+        "total_points": 0,
+        "gamemodes": {}
     },
     "1226042688055545868": {
         "mc_username": "LwkManual",
         "region": "AS",
         "total_points": 6,
         "gamemodes": {
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
+    },
+    "1379503229402087524": {
+        "mc_username": "VortexOfDooM",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1409911997889253417": {
+        "mc_username": "FardinAmjadGamer",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1057299612001648680": {
+        "mc_username": "TG_Falcon_Gaming",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1376226301802975372": {
+        "mc_username": "PoleDoPokera_",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1466705657234325625": {
+        "mc_username": "NOTVECTOR_ExE",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1471048137584939212": {
+        "mc_username": "UNFAZED_DEVEL",
+        "region": "AS",
+        "total_points": 18,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
+                "tier": "LT3",
+                "points": 6
+            },
             "sword": {
                 "tier": "LT3",
                 "points": 6
