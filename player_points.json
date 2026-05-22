@@ -85,8 +85,13 @@
     "1466705657234325625": {
         "mc_username": "NOTVECTOR_ExE",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1471048137584939212": {
         "mc_username": "UNFAZED_DEVEL",
