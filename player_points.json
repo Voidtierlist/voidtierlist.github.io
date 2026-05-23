@@ -130,5 +130,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1388400982878322759": {
+        "mc_username": "Mahfuzfether",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
