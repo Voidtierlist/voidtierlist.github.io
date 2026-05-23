@@ -72,19 +72,39 @@
     "1409911997889253417": {
         "mc_username": "FardinAmjadGamer",
         "region": "AS",
-        "total_points": 18,
+        "total_points": 37,
         "gamemodes": {
+            "smp": {
+                "tier": "HT4",
+                "points": 4
+            },
             "diamond pot": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "uhc": {
+                "tier": "LT4",
+                "points": 3
             },
             "crystal": {
                 "tier": "HT5",
                 "points": 2
             },
+            "mace": {
+                "tier": "LT4",
+                "points": 3
+            },
             "sword": {
                 "tier": "HT3",
                 "points": 10
+            },
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
@@ -151,5 +171,17 @@
                 "points": 6
             }
         }
+    },
+    "1424711007565250650": {
+        "mc_username": "lbbu",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1368079447965569156": {
+        "mc_username": "BijliKaDevta",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
