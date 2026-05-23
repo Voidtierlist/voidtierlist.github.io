@@ -86,8 +86,13 @@
     "1057299612001648680": {
         "mc_username": "TG_Falcon_Gaming",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     },
     "1376226301802975372": {
         "mc_username": "PoleDoPokera_",
