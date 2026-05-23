@@ -31,13 +31,13 @@
         "region": "AS",
         "total_points": 7,
         "gamemodes": {
-            "sword": {
-                "tier": "LT3",
-                "points": 6
-            },
             "crystal": {
                 "tier": "LT5",
                 "points": 1
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
@@ -67,8 +67,21 @@
     "1409911997889253417": {
         "mc_username": "FardinAmjadGamer",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 18,
+        "gamemodes": {
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "crystal": {
+                "tier": "HT5",
+                "points": 2
+            },
+            "sword": {
+                "tier": "HT3",
+                "points": 10
+            }
+        }
     },
     "1057299612001648680": {
         "mc_username": "TG_Falcon_Gaming",
