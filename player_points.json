@@ -61,8 +61,13 @@
     "1379503229402087524": {
         "mc_username": "VortexOfDooM",
         "region": "AS",
-        "total_points": 0,
-        "gamemodes": {}
+        "total_points": 1,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT5",
+                "points": 1
+            }
+        }
     },
     "1409911997889253417": {
         "mc_username": "FardinAmjadGamer",
