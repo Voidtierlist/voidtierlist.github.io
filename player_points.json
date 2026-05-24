@@ -128,9 +128,13 @@
     "1466705657234325625": {
         "mc_username": "NOTVECTOR_ExE",
         "region": "AS",
-        "total_points": 1,
+        "total_points": 2,
         "gamemodes": {
             "crystal": {
+                "tier": "LT5",
+                "points": 1
+            },
+            "sword": {
                 "tier": "LT5",
                 "points": 1
             }
