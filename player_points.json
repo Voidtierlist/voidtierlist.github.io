@@ -187,5 +187,16 @@
         "region": "AS",
         "total_points": 0,
         "gamemodes": {}
+    },
+    "1467411472597516432": {
+        "mc_username": "JacKThePaPa",
+        "region": "AS",
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
