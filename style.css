@@ -2,14 +2,14 @@
 
 @media (max-width:760px){
 .player .info{
-gap:12px;
+gap:14px;
 min-width:0;
 }
 
 .player .info-text{
 min-width:0;
-padding-left:6px;
-max-width:calc(100vw - 190px);
+padding-left:8px;
+max-width:calc(100vw - 198px);
 }
 
 .player .info-text h3,
@@ -23,11 +23,11 @@ white-space:nowrap;
 
 @media (max-width:480px){
 .player .info{
-gap:11px;
+gap:13px;
 }
 
 .player .info-text{
-padding-left:5px;
-max-width:calc(100vw - 178px);
+padding-left:7px;
+max-width:calc(100vw - 186px);
 }
 }
