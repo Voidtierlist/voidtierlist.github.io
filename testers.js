@@ -58,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -66,6 +65,33 @@ document.addEventListener("DOMContentLoaded", () => {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  function createFallbackAvatar(name) {
+    const initial = (name || "?").trim().charAt(0).toUpperCase() || "?";
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'>
+<defs>
+<linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'>
+<stop offset='0%' stop-color='%23172435'/>
+<stop offset='50%' stop-color='%230a111b'/>
+<stop offset='100%' stop-color='%232c2142'/>
+</linearGradient>
+</defs>
+<rect width='96' height='96' rx='12' fill='url(%23bg)'/>
+<rect x='1' y='1' width='94' height='94' rx='11' fill='none' stroke='%2367dcff' stroke-opacity='.38'/>
+<text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' fill='%23f4f7fb' font-family='Inter,Arial,sans-serif' font-size='42' font-weight='800'>${initial}</text>
+</svg>`;
+
+    return `data:image/svg+xml;utf8,${svg}`;
+  }
+
+  function hydrateAvatarFallbacks() {
+    testersGrid.querySelectorAll(".tester-avatar").forEach((avatar) => {
+      avatar.addEventListener("error", () => {
+        avatar.onerror = null;
+        avatar.src = createFallbackAvatar(avatar.dataset.fallbackName || "?");
+      }, { once: true });
+    });
   }
 
   function getStatusInfo(status) {
@@ -91,11 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((tester) => {
         const status = getStatusInfo(tester.status);
         const name = escapeHtml(tester.name);
+        const avatar = escapeHtml(tester.avatar || createFallbackAvatar(tester.name));
 
         return `
           <article class="tester-card">
             <div class="tester-avatar-wrap">
-              <img class="tester-avatar" src="${tester.avatar}" alt="${name} avatar" loading="lazy">
+              <img class="tester-avatar" src="${avatar}" data-fallback-name="${name}" alt="${name} avatar" loading="lazy">
               <span class="status-dot ${status.className}" aria-hidden="true"></span>
             </div>
             <div class="tester-meta">
@@ -107,6 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       })
       .join("");
+
+    hydrateAvatarFallbacks();
   }
 
   function updateCounts(testers) {
