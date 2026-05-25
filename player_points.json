@@ -208,15 +208,27 @@
     "1224975402553053185": {
         "mc_username": "Explosion_OP",
         "region": "AS",
-        "total_points": 22,
+        "total_points": 35,
         "gamemodes": {
             "smp": {
                 "tier": "HT4",
                 "points": 4
             },
+            "diamond pot": {
+                "tier": "LT3",
+                "points": 6
+            },
             "uhc": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "crystal": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "mace": {
+                "tier": "LT4",
+                "points": 3
             },
             "sword": {
                 "tier": "LT3",
