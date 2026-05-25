@@ -29,11 +29,11 @@
     "1356295478739730632": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 7,
+        "total_points": 9,
         "gamemodes": {
             "crystal": {
-                "tier": "LT5",
-                "points": 1
+                "tier": "LT4",
+                "points": 3
             },
             "sword": {
                 "tier": "LT3",
