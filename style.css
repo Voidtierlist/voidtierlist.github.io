@@ -18,7 +18,7 @@ z-index:9999;
 opacity:1;
 visibility:visible;
 pointer-events:auto;
-transition:opacity .42s ease,visibility .42s ease,transform .42s ease;
+transition:opacity .42s ease,visibility 0s linear 0s,transform .42s ease;
 overflow:hidden;
 }
 
@@ -50,10 +50,12 @@ animation:void-loader-orbit 5.5s linear infinite;
 }
 
 .page-loader.hidden{
+display:flex!important;
 opacity:0;
 visibility:hidden;
 pointer-events:none;
 transform:scale(1.018);
+transition:opacity .42s ease,visibility 0s linear .42s,transform .42s ease;
 }
 
 .page-loader > .loader-spinner{
