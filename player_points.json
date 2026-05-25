@@ -208,7 +208,7 @@
     "1224975402553053185": {
         "mc_username": "Explosion_OP",
         "region": "AS",
-        "total_points": 35,
+        "total_points": 39,
         "gamemodes": {
             "smp": {
                 "tier": "HT4",
@@ -233,6 +233,10 @@
             "sword": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "axe": {
+                "tier": "HT4",
+                "points": 4
             },
             "nethpot": {
                 "tier": "LT3",
