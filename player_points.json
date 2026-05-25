@@ -198,5 +198,34 @@
                 "points": 2
             }
         }
+    },
+    "1344979629450072064": {
+        "mc_username": "Itzisgoat123",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1224975402553053185": {
+        "mc_username": "Explosion_OP",
+        "region": "AS",
+        "total_points": 22,
+        "gamemodes": {
+            "smp": {
+                "tier": "HT4",
+                "points": 4
+            },
+            "uhc": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
     }
 }
