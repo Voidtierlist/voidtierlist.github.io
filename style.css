@@ -49,7 +49,8 @@ opacity:.9;
 animation:void-loader-orbit 5.5s linear infinite;
 }
 
-.page-loader.hidden{
+.page-loader.hidden,
+#pageLoader.page-loader.hidden{
 display:flex!important;
 opacity:0;
 visibility:hidden;
