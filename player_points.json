@@ -243,5 +243,16 @@
                 "points": 6
             }
         }
+    },
+    "1177547416975716453": {
+        "mc_username": "NoobyChad001",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
