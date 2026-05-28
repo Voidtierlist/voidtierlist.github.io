@@ -254,5 +254,16 @@
                 "points": 3
             }
         }
+    },
+    "1436318564016717967": {
+        "mc_username": "dysfunctioned_",
+        "region": "AS",
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
