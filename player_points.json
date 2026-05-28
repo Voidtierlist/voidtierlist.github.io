@@ -273,11 +273,15 @@
     "1225742791594737727": {
         "mc_username": "SeriouslyHadi",
         "region": "AS",
-        "total_points": 2,
+        "total_points": 8,
         "gamemodes": {
             "sword": {
                 "tier": "HT5",
                 "points": 2
+            },
+            "axe": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     },
