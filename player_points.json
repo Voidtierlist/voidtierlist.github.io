@@ -276,5 +276,16 @@
                 "points": 2
             }
         }
+    },
+    "989187077751070731": {
+        "mc_username": "NobaY_",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "sword": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
