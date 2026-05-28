@@ -265,5 +265,16 @@
                 "points": 2
             }
         }
+    },
+    "1225742791594737727": {
+        "mc_username": "SeriouslyHadi",
+        "region": "AS",
+        "total_points": 2,
+        "gamemodes": {
+            "sword": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
