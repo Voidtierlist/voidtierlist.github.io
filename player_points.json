@@ -306,5 +306,16 @@
                 "points": 2
             }
         }
+    },
+    "1205149483525218334": {
+        "mc_username": "MoizMoreX",
+        "region": "AS",
+        "total_points": 2,
+        "gamemodes": {
+            "axe": {
+                "tier": "HT5",
+                "points": 2
+            }
+        }
     }
 }
