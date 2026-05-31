@@ -317,5 +317,16 @@
                 "points": 2
             }
         }
+    },
+    "1378991972039135326": {
+        "mc_username": "Azyric",
+        "region": "AS",
+        "total_points": 3,
+        "gamemodes": {
+            "axe": {
+                "tier": "LT4",
+                "points": 3
+            }
+        }
     }
 }
