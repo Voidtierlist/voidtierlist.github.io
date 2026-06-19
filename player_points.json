@@ -317,8 +317,12 @@
     "876434880970518539": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 9,
+        "total_points": 25,
         "gamemodes": {
+            "uhc": {
+                "tier": "HT4",
+                "points": 4
+            },
             "crystal": {
                 "tier": "LT4",
                 "points": 3
@@ -326,7 +330,74 @@
             "sword": {
                 "tier": "LT3",
                 "points": 6
+            },
+            "axe": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "nethpot": {
+                "tier": "LT3",
+                "points": 6
             }
         }
+    },
+    "1316464764247085090": {
+        "mc_username": "Teyotaa",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1090289326216183958": {
+        "mc_username": "lilclumzyy",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1481881806667251732": {
+        "mc_username": "GabTheEagle",
+        "region": "AS",
+        "total_points": 6,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT3",
+                "points": 6
+            }
+        }
+    },
+    "1187598029671366709": {
+        "mc_username": "FaizKagegc",
+        "region": "EU",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1465266748398764256": {
+        "mc_username": "AstralDrag0n",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1359908313286050044": {
+        "mc_username": "CamouflagePlayZ",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1169664448613585057": {
+        "mc_username": "TorpedoMC",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1131960872282095656": {
+        "mc_username": "Tosquee",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
+    },
+    "1008338883865497700": {
+        "mc_username": "TryingHate",
+        "region": "AS",
+        "total_points": 0,
+        "gamemodes": {}
     }
 }
