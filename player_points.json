@@ -26,21 +26,6 @@
             }
         }
     },
-    "1356295478739730632": {
-        "mc_username": "Straitgamerz",
-        "region": "AS",
-        "total_points": 9,
-        "gamemodes": {
-            "crystal": {
-                "tier": "LT4",
-                "points": 3
-            },
-            "sword": {
-                "tier": "LT3",
-                "points": 6
-            }
-        }
-    },
     "1250746642676584523": {
         "mc_username": "VoidCanSolo",
         "region": "AS",
@@ -326,6 +311,21 @@
             "axe": {
                 "tier": "LT4",
                 "points": 3
+            }
+        }
+    },
+    "876434880970518539": {
+        "mc_username": "Straitgamerz",
+        "region": "AS",
+        "total_points": 9,
+        "gamemodes": {
+            "crystal": {
+                "tier": "LT4",
+                "points": 3
+            },
+            "sword": {
+                "tier": "LT3",
+                "points": 6
             }
         }
     }
