@@ -310,11 +310,15 @@
     "1378991972039135326": {
         "mc_username": "Azyric",
         "region": "AS",
-        "total_points": 3,
+        "total_points": 4,
         "gamemodes": {
             "axe": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "sword": {
+                "tier": "LT5",
+                "points": 1
             }
         }
     },
