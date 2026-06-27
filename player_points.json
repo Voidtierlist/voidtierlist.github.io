@@ -247,7 +247,7 @@
     "1436318564016717967": {
         "mc_username": "dysfunctioned_",
         "region": "AS",
-        "total_points": 5,
+        "total_points": 6,
         "gamemodes": {
             "sword": {
                 "tier": "HT5",
@@ -256,6 +256,10 @@
             "axe": {
                 "tier": "LT4",
                 "points": 3
+            },
+            "crystal": {
+                "tier": "LT5",
+                "points": 1
             }
         }
     },
