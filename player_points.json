@@ -333,7 +333,7 @@
     "876434880970518539": {
         "mc_username": "Straitgamerz",
         "region": "AS",
-        "total_points": 25,
+        "total_points": 31,
         "gamemodes": {
             "uhc": {
                 "tier": "HT4",
@@ -352,6 +352,10 @@
                 "points": 6
             },
             "nethpot": {
+                "tier": "LT3",
+                "points": 6
+            },
+            "mace": {
                 "tier": "LT3",
                 "points": 6
             }
